@@ -208,10 +208,7 @@
 
         // Default charts
         drawBarChart(medals["all_years"], "Medals By Country - Total");
-        drawEventChart(
-          createEventsData(events),
-          "Medals By Sport - Total"
-        );
+        drawEventChart(createEventsData(events), "Medals By Sport - Total");
         drawAthleteChart(
           createAthleteData(athletes),
           "Medals By Athlete - Total"
@@ -248,26 +245,32 @@
 
           for (const athlete in data) {
             const entries = data[athlete];
-            medals_count = 0;
+            bronze_count = 0;
+            silver_count = 0;
+            gold_count = 0;
             for (const item of entries) {
               const matchYear = !year || item.year == year;
               const matchCountry = !country || item.country == country;
               const matchSport = !sport || item.sport == sport;
 
               if (matchYear && matchCountry && matchSport) {
-                medals_count += item.bronze;
-                medals_count += item.gold;
-                medals_count += item.silver;
+                bronze_count += item.bronze;
+                gold_count += item.gold;
+                silver_count += item.silver;
               }
             }
-
+            
+            medals_count = bronze_count + gold_count + silver_count;
             if (medals_count != 0) {
               result.push({
                 athlete: athlete,
-                medals: medals_count,
+                bronze: bronze_count,
+                silver: silver_count,
+                gold: gold_count,
               });
             }
           }
+          console.log(result);
           return result;
         }
 
@@ -398,7 +401,7 @@
                   athletes,
                   selectedYear,
                   selectedCountry,
-                  selectedSport
+                  selectedSport,
                 ),
                 `Medals By Athlete — ${selectedYear}, ${selectedCountry}, and ${selectedSport}`
               );
@@ -419,7 +422,12 @@
         function drawAthleteChart(data, titleText) {
           if (!data) return;
           d3.select("#chart-athletes-title").text(titleText);
-          data = data.sort((a, b) => d3.descending(a.medals, b.medals));
+
+          // Compute total medals and sort
+          data.forEach((d) => {
+            d.total = d.bronze + d.silver + d.gold;
+          });
+          data = data.sort((a, b) => d3.descending(a.total, b.total));
 
           const barHeight = 15;
           const visibleHeight = 500;
@@ -430,47 +438,81 @@
           svgAthleteChart.attr("height", svgHeight);
           svgAthleteChart.selectAll("*").remove();
 
+          // X scale based on total medals
           const x = d3
             .scaleLinear()
-            .domain([0, d3.max(data, (d) => d.medals)])
+            .domain([0, d3.max(data, (d) => d.total)])
             .nice()
             .range([150, chartWidth - margin.right]);
+
+          // Y scale is athletes
           const y = d3
             .scaleBand()
             .domain(data.map((d) => d.athlete))
             .range([margin.top, neededHeight - margin.bottom])
             .padding(0.2);
 
+          // Axes
           svgAthleteChart
             .append("g")
             .attr("transform", `translate(0, ${neededHeight - margin.bottom})`)
             .call(d3.axisBottom(x));
+
           svgAthleteChart
             .append("g")
-            .attr("transform", `translate(${150}, 0)`)
+            .attr("transform", `translate(150, 0)`)
             .call(d3.axisLeft(y));
+
+          // Colors for each medal type
+          const medalColors = {
+            bronze: "#9F7A34",
+            silver: "#c0c0c0",
+            gold: "#D4AF37",
+          };
+
+          // Stacked bar drawing
           svgAthleteChart
             .append("g")
-            .selectAll("rect")
+            .selectAll("g.athlete-bar")
             .data(data)
             .enter()
-            .append("rect")
-            .attr("class", "bar")
-            .attr("y", (d) => y(d.athlete))
-            .attr("x", x(0))
-            .attr("height", y.bandwidth())
-            .attr("width", (d) => x(d.medals) - x(0))
-            .on("mouseover", (event, d) => {
-              tooltip
-                .style("opacity", 1)
-                .html(`${d.athlete}: ${d.medals} medals`);
-            })
-            .on("mousemove", (event) => {
-              tooltip
-                .style("left", event.pageX + 14 + "px")
-                .style("top", event.pageY + 14 + "px");
-            })
-            .on("mouseout", () => tooltip.style("opacity", 0));
+            .append("g")
+            .attr("class", "athlete-bar")
+            .attr("transform", (d) => `translate(0, ${y(d.athlete)})`)
+            .each(function (d) {
+              let currentX = x(0); // start at 0
+              const medalOrder = ["bronze", "silver", "gold"];
+
+              medalOrder.forEach((medal) => {
+                const value = d[medal];
+                if (value > 0) {
+                  const rectWidth = x(value) - x(0);
+                  d3.select(this)
+                    .append("rect")
+                    .attr("x", currentX)
+                    .attr("width", rectWidth)
+                    .attr("height", y.bandwidth())
+                    .attr("fill", medalColors[medal])
+                    .on("mouseover", (event) => {
+                      tooltip.style("opacity", 1).html(`
+                  <strong>${d.athlete}</strong><br>
+                  Gold: ${d.gold}<br>
+                  Silver: ${d.silver}<br>
+                  Bronze: ${d.bronze}<br>
+                  Total: ${d.total}
+                `);
+                    })
+                    .on("mousemove", (event) => {
+                      tooltip
+                        .style("left", event.pageX + 14 + "px")
+                        .style("top", event.pageY + 14 + "px");
+                    })
+                    .on("mouseout", () => tooltip.style("opacity", 0));
+
+                  currentX += rectWidth; // increment X for next medal
+                }
+              });
+            });
         }
       });
     </script>
