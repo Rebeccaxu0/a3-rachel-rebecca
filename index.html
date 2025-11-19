@@ -496,21 +496,16 @@
             .attr("transform", (d) => `translate(0, ${y(d.country)})`)
             .on("click", (event, d) => {
               selectedCountry = d.country;
+              title = '';
+              if (selectedYear) {
+                title = `Medals By Sport — ${selectedYear} and ${selectedCountry}`
+              } else {
+                title = `Medals By Sport — ${selectedCountry}`
+              }
               drawEventChart(
                 createEventsData(events, selectedYear, selectedCountry),
-                `Medals By Sport — ${selectedYear} and ${selectedCountry}`
+                title
               );
-              //   if (selectedYear) {
-              //     drawEventChart(
-              //       createEventsData(events, selectedYear, selectedCountry),
-              //       `Medals By Sport — ${selectedYear} and ${selectedCountry}`
-              //     );
-              //   } else {
-              //     drawEventChart(
-              //       createEventsData(events, null, selectedCountry),
-              //       `Medals By Sport — ${selectedCountry}`
-              //     );
-              //   }
             })
             .each(function (d) {
               let currentX = x(0); // start at 0
@@ -610,7 +605,16 @@
             .attr("transform", (d) => `translate(0, ${y(d.sport)})`)
             .on("click", (event, d) => {
               selectedSport = d.sport;
-              console.log(selectedSport);
+              title = '';
+              if (selectedYear && selectedCountry) {
+                title = `Medals By Athlete — ${selectedYear}, ${selectedCountry}, and ${selectedSport}`;
+              } else if (selectedYear) {
+                title = `Medals By Athlete — ${selectedYear} and ${selectedSport}`;
+              } else if (selectedCountry) {
+                title = `Medals By Athlete — ${selectedCountry} and ${selectedSport}`;
+              } else {
+                title  = `Medals By Athlete — ${selectedSport}`;
+              }
               drawAthleteChart(
                 createAthleteData(
                   athletes,
@@ -618,7 +622,7 @@
                   selectedCountry,
                   selectedSport
                 ),
-                `Medals By Athlete — ${selectedYear}, ${selectedCountry}, and ${selectedSport}`
+                title
               );
             })
 
