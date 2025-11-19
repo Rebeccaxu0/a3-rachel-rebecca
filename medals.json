@@ -1,0 +1,5282 @@
+{
+  "1896": [
+    {
+      "country": "GRE",
+      "medals": 52
+    },
+    {
+      "country": "GER",
+      "medals": 33
+    },
+    {
+      "country": "USA",
+      "medals": 20
+    },
+    {
+      "country": "FRA",
+      "medals": 11
+    },
+    {
+      "country": "GBR",
+      "medals": 7
+    },
+    {
+      "country": "HUN",
+      "medals": 6
+    },
+    {
+      "country": "DEN",
+      "medals": 6
+    },
+    {
+      "country": "ZZX",
+      "medals": 6
+    },
+    {
+      "country": "AUT",
+      "medals": 5
+    },
+    {
+      "country": "SUI",
+      "medals": 3
+    },
+    {
+      "country": "AUS",
+      "medals": 2
+    }
+  ],
+  "1900": [
+    {
+      "country": "FRA",
+      "medals": 185
+    },
+    {
+      "country": "GBR",
+      "medals": 78
+    },
+    {
+      "country": "USA",
+      "medals": 55
+    },
+    {
+      "country": "GER",
+      "medals": 40
+    },
+    {
+      "country": "BEL",
+      "medals": 39
+    },
+    {
+      "country": "ZZX",
+      "medals": 34
+    },
+    {
+      "country": "NED",
+      "medals": 20
+    },
+    {
+      "country": "SUI",
+      "medals": 15
+    },
+    {
+      "country": "NOR",
+      "medals": 9
+    },
+    {
+      "country": "AUT",
+      "medals": 6
+    },
+    {
+      "country": "DEN",
+      "medals": 6
+    },
+    {
+      "country": "HUN",
+      "medals": 5
+    },
+    {
+      "country": "AUS",
+      "medals": 5
+    },
+    {
+      "country": "ITA",
+      "medals": 4
+    },
+    {
+      "country": "IND",
+      "medals": 2
+    },
+    {
+      "country": "CAN",
+      "medals": 2
+    },
+    {
+      "country": "BOH",
+      "medals": 2
+    },
+    {
+      "country": "ESP",
+      "medals": 2
+    },
+    {
+      "country": "CUB",
+      "medals": 2
+    },
+    {
+      "country": "SWE",
+      "medals": 1
+    }
+  ],
+  "1904": [
+    {
+      "country": "USA",
+      "medals": 394
+    },
+    {
+      "country": "CAN",
+      "medals": 35
+    },
+    {
+      "country": "GER",
+      "medals": 13
+    },
+    {
+      "country": "CUB",
+      "medals": 9
+    },
+    {
+      "country": "ZZX",
+      "medals": 8
+    },
+    {
+      "country": "HUN",
+      "medals": 4
+    },
+    {
+      "country": "GBR",
+      "medals": 2
+    },
+    {
+      "country": "GRE",
+      "medals": 2
+    },
+    {
+      "country": "SUI",
+      "medals": 2
+    },
+    {
+      "country": "AUT",
+      "medals": 1
+    }
+  ],
+  "1908": [
+    {
+      "country": "GBR",
+      "medals": 347
+    },
+    {
+      "country": "SWE",
+      "medals": 98
+    },
+    {
+      "country": "USA",
+      "medals": 63
+    },
+    {
+      "country": "CAN",
+      "medals": 51
+    },
+    {
+      "country": "NOR",
+      "medals": 44
+    },
+    {
+      "country": "FRA",
+      "medals": 35
+    },
+    {
+      "country": "BEL",
+      "medals": 31
+    },
+    {
+      "country": "FIN",
+      "medals": 29
+    },
+    {
+      "country": "GER",
+      "medals": 22
+    },
+    {
+      "country": "ANZ",
+      "medals": 19
+    },
+    {
+      "country": "HUN",
+      "medals": 18
+    },
+    {
+      "country": "DEN",
+      "medals": 15
+    },
+    {
+      "country": "NED",
+      "medals": 11
+    },
+    {
+      "country": "ITA",
+      "medals": 7
+    },
+    {
+      "country": "BOH",
+      "medals": 5
+    },
+    {
+      "country": "GRE",
+      "medals": 3
+    },
+    {
+      "country": "RU1",
+      "medals": 3
+    },
+    {
+      "country": "RSA",
+      "medals": 2
+    },
+    {
+      "country": "AUT",
+      "medals": 1
+    }
+  ],
+  "1912": [
+    {
+      "country": "SWE",
+      "medals": 173
+    },
+    {
+      "country": "GBR",
+      "medals": 160
+    },
+    {
+      "country": "USA",
+      "medals": 101
+    },
+    {
+      "country": "DEN",
+      "medals": 84
+    },
+    {
+      "country": "NOR",
+      "medals": 76
+    },
+    {
+      "country": "FIN",
+      "medals": 67
+    },
+    {
+      "country": "GER",
+      "medals": 52
+    },
+    {
+      "country": "HUN",
+      "medals": 30
+    },
+    {
+      "country": "FRA",
+      "medals": 25
+    },
+    {
+      "country": "NED",
+      "medals": 22
+    },
+    {
+      "country": "ITA",
+      "medals": 21
+    },
+    {
+      "country": "BEL",
+      "medals": 19
+    },
+    {
+      "country": "AUT",
+      "medals": 14
+    },
+    {
+      "country": "RU1",
+      "medals": 14
+    },
+    {
+      "country": "ANZ",
+      "medals": 10
+    },
+    {
+      "country": "CAN",
+      "medals": 8
+    },
+    {
+      "country": "RSA",
+      "medals": 7
+    },
+    {
+      "country": "GRE",
+      "medals": 2
+    }
+  ],
+  "1920": [
+    {
+      "country": "USA",
+      "medals": 193
+    },
+    {
+      "country": "BEL",
+      "medals": 188
+    },
+    {
+      "country": "SWE",
+      "medals": 146
+    },
+    {
+      "country": "FRA",
+      "medals": 141
+    },
+    {
+      "country": "NOR",
+      "medals": 141
+    },
+    {
+      "country": "GBR",
+      "medals": 107
+    },
+    {
+      "country": "ITA",
+      "medals": 84
+    },
+    {
+      "country": "DEN",
+      "medals": 75
+    },
+    {
+      "country": "FIN",
+      "medals": 49
+    },
+    {
+      "country": "NED",
+      "medals": 48
+    },
+    {
+      "country": "SUI",
+      "medals": 29
+    },
+    {
+      "country": "ESP",
+      "medals": 24
+    },
+    {
+      "country": "RSA",
+      "medals": 21
+    },
+    {
+      "country": "CAN",
+      "medals": 16
+    },
+    {
+      "country": "TCH",
+      "medals": 10
+    },
+    {
+      "country": "BRA",
+      "medals": 7
+    },
+    {
+      "country": "AUS",
+      "medals": 6
+    },
+    {
+      "country": "GRE",
+      "medals": 5
+    },
+    {
+      "country": "EST",
+      "medals": 3
+    },
+    {
+      "country": "JPN",
+      "medals": 3
+    },
+    {
+      "country": "NZL",
+      "medals": 1
+    },
+    {
+      "country": "LUX",
+      "medals": 1
+    }
+  ],
+  "1924": [
+    {
+      "country": "USA",
+      "medals": 198
+    },
+    {
+      "country": "FRA",
+      "medals": 122
+    },
+    {
+      "country": "SWE",
+      "medals": 80
+    },
+    {
+      "country": "GBR",
+      "medals": 66
+    },
+    {
+      "country": "SUI",
+      "medals": 65
+    },
+    {
+      "country": "FIN",
+      "medals": 52
+    },
+    {
+      "country": "ITA",
+      "medals": 51
+    },
+    {
+      "country": "BEL",
+      "medals": 38
+    },
+    {
+      "country": "NED",
+      "medals": 26
+    },
+    {
+      "country": "NOR",
+      "medals": 26
+    },
+    {
+      "country": "ROU",
+      "medals": 23
+    },
+    {
+      "country": "URU",
+      "medals": 22
+    },
+    {
+      "country": "HUN",
+      "medals": 20
+    },
+    {
+      "country": "CAN",
+      "medals": 20
+    },
+    {
+      "country": "DEN",
+      "medals": 12
+    },
+    {
+      "country": "ARG",
+      "medals": 11
+    },
+    {
+      "country": "AUS",
+      "medals": 10
+    },
+    {
+      "country": "TCH",
+      "medals": 10
+    },
+    {
+      "country": "HAI",
+      "medals": 7
+    },
+    {
+      "country": "EST",
+      "medals": 6
+    },
+    {
+      "country": "POL",
+      "medals": 5
+    },
+    {
+      "country": "AUT",
+      "medals": 4
+    },
+    {
+      "country": "RSA",
+      "medals": 3
+    },
+    {
+      "country": "POR",
+      "medals": 3
+    },
+    {
+      "country": "YUG",
+      "medals": 2
+    },
+    {
+      "country": "NZL",
+      "medals": 1
+    },
+    {
+      "country": "JPN",
+      "medals": 1
+    }
+  ],
+  "1928": [
+    {
+      "country": "USA",
+      "medals": 84
+    },
+    {
+      "country": "GER",
+      "medals": 72
+    },
+    {
+      "country": "ITA",
+      "medals": 70
+    },
+    {
+      "country": "NED",
+      "medals": 65
+    },
+    {
+      "country": "GBR",
+      "medals": 55
+    },
+    {
+      "country": "SWE",
+      "medals": 36
+    },
+    {
+      "country": "FRA",
+      "medals": 36
+    },
+    {
+      "country": "CAN",
+      "medals": 33
+    },
+    {
+      "country": "ARG",
+      "medals": 32
+    },
+    {
+      "country": "SUI",
+      "medals": 29
+    },
+    {
+      "country": "FIN",
+      "medals": 25
+    },
+    {
+      "country": "URU",
+      "medals": 22
+    },
+    {
+      "country": "HUN",
+      "medals": 20
+    },
+    {
+      "country": "POL",
+      "medals": 18
+    },
+    {
+      "country": "TCH",
+      "medals": 16
+    },
+    {
+      "country": "IND",
+      "medals": 15
+    },
+    {
+      "country": "DEN",
+      "medals": 13
+    },
+    {
+      "country": "YUG",
+      "medals": 12
+    },
+    {
+      "country": "NOR",
+      "medals": 9
+    },
+    {
+      "country": "EST",
+      "medals": 9
+    },
+    {
+      "country": "JPN",
+      "medals": 8
+    },
+    {
+      "country": "RSA",
+      "medals": 6
+    },
+    {
+      "country": "BEL",
+      "medals": 5
+    },
+    {
+      "country": "EGY",
+      "medals": 4
+    },
+    {
+      "country": "AUS",
+      "medals": 4
+    },
+    {
+      "country": "AUT",
+      "medals": 4
+    },
+    {
+      "country": "ESP",
+      "medals": 3
+    },
+    {
+      "country": "PHI",
+      "medals": 1
+    },
+    {
+      "country": "IRL",
+      "medals": 1
+    },
+    {
+      "country": "HAI",
+      "medals": 1
+    },
+    {
+      "country": "CHI",
+      "medals": 1
+    },
+    {
+      "country": "NZL",
+      "medals": 1
+    }
+  ],
+  "1932": [
+    {
+      "country": "USA",
+      "medals": 181
+    },
+    {
+      "country": "ITA",
+      "medals": 77
+    },
+    {
+      "country": "GER",
+      "medals": 38
+    },
+    {
+      "country": "CAN",
+      "medals": 38
+    },
+    {
+      "country": "FRA",
+      "medals": 37
+    },
+    {
+      "country": "GBR",
+      "medals": 34
+    },
+    {
+      "country": "HUN",
+      "medals": 32
+    },
+    {
+      "country": "JPN",
+      "medals": 31
+    },
+    {
+      "country": "SWE",
+      "medals": 31
+    },
+    {
+      "country": "FIN",
+      "medals": 29
+    },
+    {
+      "country": "POL",
+      "medals": 19
+    },
+    {
+      "country": "NED",
+      "medals": 12
+    },
+    {
+      "country": "IND",
+      "medals": 11
+    },
+    {
+      "country": "DEN",
+      "medals": 9
+    },
+    {
+      "country": "AUS",
+      "medals": 5
+    },
+    {
+      "country": "RSA",
+      "medals": 5
+    },
+    {
+      "country": "AUT",
+      "medals": 5
+    },
+    {
+      "country": "ARG",
+      "medals": 4
+    },
+    {
+      "country": "TCH",
+      "medals": 4
+    },
+    {
+      "country": "PHI",
+      "medals": 3
+    },
+    {
+      "country": "IRL",
+      "medals": 2
+    },
+    {
+      "country": "MEX",
+      "medals": 2
+    },
+    {
+      "country": "NZL",
+      "medals": 2
+    },
+    {
+      "country": "LAT",
+      "medals": 1
+    },
+    {
+      "country": "SUI",
+      "medals": 1
+    },
+    {
+      "country": "URU",
+      "medals": 1
+    },
+    {
+      "country": "ESP",
+      "medals": 1
+    }
+  ],
+  "1936": [
+    {
+      "country": "GER",
+      "medals": 210
+    },
+    {
+      "country": "USA",
+      "medals": 92
+    },
+    {
+      "country": "ITA",
+      "medals": 71
+    },
+    {
+      "country": "AUT",
+      "medals": 50
+    },
+    {
+      "country": "SUI",
+      "medals": 47
+    },
+    {
+      "country": "FRA",
+      "medals": 43
+    },
+    {
+      "country": "HUN",
+      "medals": 42
+    },
+    {
+      "country": "NED",
+      "medals": 37
+    },
+    {
+      "country": "GBR",
+      "medals": 36
+    },
+    {
+      "country": "SWE",
+      "medals": 34
+    },
+    {
+      "country": "NOR",
+      "medals": 28
+    },
+    {
+      "country": "FIN",
+      "medals": 26
+    },
+    {
+      "country": "CAN",
+      "medals": 22
+    },
+    {
+      "country": "JPN",
+      "medals": 21
+    },
+    {
+      "country": "IND",
+      "medals": 19
+    },
+    {
+      "country": "TCH",
+      "medals": 17
+    },
+    {
+      "country": "MEX",
+      "medals": 16
+    },
+    {
+      "country": "BEL",
+      "medals": 12
+    },
+    {
+      "country": "ARG",
+      "medals": 11
+    },
+    {
+      "country": "POL",
+      "medals": 9
+    },
+    {
+      "country": "EST",
+      "medals": 7
+    },
+    {
+      "country": "DEN",
+      "medals": 6
+    },
+    {
+      "country": "EGY",
+      "medals": 5
+    },
+    {
+      "country": "POR",
+      "medals": 3
+    },
+    {
+      "country": "LAT",
+      "medals": 2
+    },
+    {
+      "country": "ROU",
+      "medals": 2
+    },
+    {
+      "country": "TUR",
+      "medals": 2
+    },
+    {
+      "country": "NZL",
+      "medals": 1
+    },
+    {
+      "country": "PHI",
+      "medals": 1
+    },
+    {
+      "country": "AUS",
+      "medals": 1
+    },
+    {
+      "country": "RSA",
+      "medals": 1
+    },
+    {
+      "country": "YUG",
+      "medals": 1
+    }
+  ],
+  "1948": [
+    {
+      "country": "USA",
+      "medals": 148
+    },
+    {
+      "country": "SWE",
+      "medals": 73
+    },
+    {
+      "country": "FRA",
+      "medals": 68
+    },
+    {
+      "country": "ITA",
+      "medals": 63
+    },
+    {
+      "country": "HUN",
+      "medals": 60
+    },
+    {
+      "country": "GBR",
+      "medals": 56
+    },
+    {
+      "country": "DEN",
+      "medals": 49
+    },
+    {
+      "country": "NED",
+      "medals": 42
+    },
+    {
+      "country": "SUI",
+      "medals": 32
+    },
+    {
+      "country": "FIN",
+      "medals": 29
+    },
+    {
+      "country": "TCH",
+      "medals": 20
+    },
+    {
+      "country": "IND",
+      "medals": 20
+    },
+    {
+      "country": "NOR",
+      "medals": 18
+    },
+    {
+      "country": "AUS",
+      "medals": 16
+    },
+    {
+      "country": "YUG",
+      "medals": 16
+    },
+    {
+      "country": "BEL",
+      "medals": 14
+    },
+    {
+      "country": "ARG",
+      "medals": 12
+    },
+    {
+      "country": "TUR",
+      "medals": 12
+    },
+    {
+      "country": "BRA",
+      "medals": 12
+    },
+    {
+      "country": "MEX",
+      "medals": 9
+    },
+    {
+      "country": "CAN",
+      "medals": 6
+    },
+    {
+      "country": "POR",
+      "medals": 5
+    },
+    {
+      "country": "EGY",
+      "medals": 5
+    },
+    {
+      "country": "AUT",
+      "medals": 4
+    },
+    {
+      "country": "RSA",
+      "medals": 4
+    },
+    {
+      "country": "JAM",
+      "medals": 3
+    },
+    {
+      "country": "ESP",
+      "medals": 3
+    },
+    {
+      "country": "URU",
+      "medals": 3
+    },
+    {
+      "country": "PAN",
+      "medals": 2
+    },
+    {
+      "country": "KOR",
+      "medals": 2
+    },
+    {
+      "country": "CUB",
+      "medals": 2
+    },
+    {
+      "country": "SRI",
+      "medals": 1
+    },
+    {
+      "country": "PUR",
+      "medals": 1
+    },
+    {
+      "country": "POL",
+      "medals": 1
+    },
+    {
+      "country": "PER",
+      "medals": 1
+    },
+    {
+      "country": "IRI",
+      "medals": 1
+    },
+    {
+      "country": "TRI",
+      "medals": 1
+    }
+  ],
+  "1952": [
+    {
+      "country": "USA",
+      "medals": 130
+    },
+    {
+      "country": "URS",
+      "medals": 117
+    },
+    {
+      "country": "HUN",
+      "medals": 101
+    },
+    {
+      "country": "SWE",
+      "medals": 70
+    },
+    {
+      "country": "ITA",
+      "medals": 53
+    },
+    {
+      "country": "GER",
+      "medals": 40
+    },
+    {
+      "country": "FIN",
+      "medals": 40
+    },
+    {
+      "country": "FRA",
+      "medals": 39
+    },
+    {
+      "country": "SUI",
+      "medals": 33
+    },
+    {
+      "country": "GBR",
+      "medals": 31
+    },
+    {
+      "country": "TCH",
+      "medals": 25
+    },
+    {
+      "country": "YUG",
+      "medals": 24
+    },
+    {
+      "country": "AUS",
+      "medals": 20
+    },
+    {
+      "country": "NED",
+      "medals": 18
+    },
+    {
+      "country": "IND",
+      "medals": 15
+    },
+    {
+      "country": "RSA",
+      "medals": 14
+    },
+    {
+      "country": "URU",
+      "medals": 14
+    },
+    {
+      "country": "NOR",
+      "medals": 13
+    },
+    {
+      "country": "JPN",
+      "medals": 12
+    },
+    {
+      "country": "DEN",
+      "medals": 9
+    },
+    {
+      "country": "JAM",
+      "medals": 8
+    },
+    {
+      "country": "BEL",
+      "medals": 7
+    },
+    {
+      "country": "IRI",
+      "medals": 7
+    },
+    {
+      "country": "ARG",
+      "medals": 6
+    },
+    {
+      "country": "ROU",
+      "medals": 4
+    },
+    {
+      "country": "POL",
+      "medals": 4
+    },
+    {
+      "country": "CAN",
+      "medals": 4
+    },
+    {
+      "country": "CHI",
+      "medals": 4
+    },
+    {
+      "country": "NZL",
+      "medals": 3
+    },
+    {
+      "country": "BRA",
+      "medals": 3
+    },
+    {
+      "country": "AUT",
+      "medals": 3
+    },
+    {
+      "country": "TUR",
+      "medals": 3
+    },
+    {
+      "country": "KOR",
+      "medals": 2
+    },
+    {
+      "country": "POR",
+      "medals": 2
+    },
+    {
+      "country": "TRI",
+      "medals": 2
+    },
+    {
+      "country": "LIB",
+      "medals": 2
+    },
+    {
+      "country": "MEX",
+      "medals": 1
+    },
+    {
+      "country": "LUX",
+      "medals": 1
+    },
+    {
+      "country": "VEN",
+      "medals": 1
+    },
+    {
+      "country": "IRL",
+      "medals": 1
+    },
+    {
+      "country": "BUL",
+      "medals": 1
+    },
+    {
+      "country": "ESP",
+      "medals": 1
+    },
+    {
+      "country": "EGY",
+      "medals": 1
+    }
+  ],
+  "1956": [
+    {
+      "country": "URS",
+      "medals": 169
+    },
+    {
+      "country": "USA",
+      "medals": 118
+    },
+    {
+      "country": "HUN",
+      "medals": 64
+    },
+    {
+      "country": "AUS",
+      "medals": 61
+    },
+    {
+      "country": "EUA",
+      "medals": 57
+    },
+    {
+      "country": "ITA",
+      "medals": 46
+    },
+    {
+      "country": "GBR",
+      "medals": 45
+    },
+    {
+      "country": "SWE",
+      "medals": 34
+    },
+    {
+      "country": "FRA",
+      "medals": 32
+    },
+    {
+      "country": "FIN",
+      "medals": 26
+    },
+    {
+      "country": "JPN",
+      "medals": 24
+    },
+    {
+      "country": "YUG",
+      "medals": 23
+    },
+    {
+      "country": "CAN",
+      "medals": 19
+    },
+    {
+      "country": "POL",
+      "medals": 19
+    },
+    {
+      "country": "ROU",
+      "medals": 19
+    },
+    {
+      "country": "BUL",
+      "medals": 18
+    },
+    {
+      "country": "IND",
+      "medals": 17
+    },
+    {
+      "country": "PAK",
+      "medals": 14
+    },
+    {
+      "country": "URU",
+      "medals": 12
+    },
+    {
+      "country": "RSA",
+      "medals": 7
+    },
+    {
+      "country": "TCH",
+      "medals": 7
+    },
+    {
+      "country": "DEN",
+      "medals": 7
+    },
+    {
+      "country": "TUR",
+      "medals": 7
+    },
+    {
+      "country": "IRL",
+      "medals": 5
+    },
+    {
+      "country": "IRI",
+      "medals": 5
+    },
+    {
+      "country": "CHI",
+      "medals": 4
+    },
+    {
+      "country": "AUT",
+      "medals": 4
+    },
+    {
+      "country": "NOR",
+      "medals": 3
+    },
+    {
+      "country": "NZL",
+      "medals": 3
+    },
+    {
+      "country": "SUI",
+      "medals": 3
+    },
+    {
+      "country": "MEX",
+      "medals": 2
+    },
+    {
+      "country": "KOR",
+      "medals": 2
+    },
+    {
+      "country": "ARG",
+      "medals": 2
+    },
+    {
+      "country": "BEL",
+      "medals": 2
+    },
+    {
+      "country": "BAH",
+      "medals": 2
+    },
+    {
+      "country": "GRE",
+      "medals": 1
+    },
+    {
+      "country": "BRA",
+      "medals": 1
+    },
+    {
+      "country": "ISL",
+      "medals": 1
+    }
+  ],
+  "1960": [
+    {
+      "country": "URS",
+      "medals": 169
+    },
+    {
+      "country": "USA",
+      "medals": 112
+    },
+    {
+      "country": "EUA",
+      "medals": 88
+    },
+    {
+      "country": "ITA",
+      "medals": 88
+    },
+    {
+      "country": "HUN",
+      "medals": 65
+    },
+    {
+      "country": "AUS",
+      "medals": 36
+    },
+    {
+      "country": "POL",
+      "medals": 30
+    },
+    {
+      "country": "JPN",
+      "medals": 29
+    },
+    {
+      "country": "GBR",
+      "medals": 28
+    },
+    {
+      "country": "DEN",
+      "medals": 23
+    },
+    {
+      "country": "TCH",
+      "medals": 22
+    },
+    {
+      "country": "YUG",
+      "medals": 17
+    },
+    {
+      "country": "ROU",
+      "medals": 15
+    },
+    {
+      "country": "ESP",
+      "medals": 14
+    },
+    {
+      "country": "PAK",
+      "medals": 14
+    },
+    {
+      "country": "BRA",
+      "medals": 13
+    },
+    {
+      "country": "IND",
+      "medals": 13
+    },
+    {
+      "country": "FRA",
+      "medals": 11
+    },
+    {
+      "country": "SUI",
+      "medals": 11
+    },
+    {
+      "country": "CAN",
+      "medals": 9
+    },
+    {
+      "country": "TUR",
+      "medals": 9
+    },
+    {
+      "country": "SWE",
+      "medals": 7
+    },
+    {
+      "country": "BUL",
+      "medals": 7
+    },
+    {
+      "country": "FIN",
+      "medals": 6
+    },
+    {
+      "country": "BWI",
+      "medals": 5
+    },
+    {
+      "country": "BEL",
+      "medals": 4
+    },
+    {
+      "country": "ARG",
+      "medals": 4
+    },
+    {
+      "country": "IRI",
+      "medals": 4
+    },
+    {
+      "country": "NED",
+      "medals": 3
+    },
+    {
+      "country": "RSA",
+      "medals": 3
+    },
+    {
+      "country": "NZL",
+      "medals": 3
+    },
+    {
+      "country": "AUT",
+      "medals": 3
+    },
+    {
+      "country": "GRE",
+      "medals": 3
+    },
+    {
+      "country": "EGY",
+      "medals": 2
+    },
+    {
+      "country": "NOR",
+      "medals": 2
+    },
+    {
+      "country": "POR",
+      "medals": 2
+    },
+    {
+      "country": "MEX",
+      "medals": 1
+    },
+    {
+      "country": "TPE",
+      "medals": 1
+    },
+    {
+      "country": "ETH",
+      "medals": 1
+    },
+    {
+      "country": "MAR",
+      "medals": 1
+    },
+    {
+      "country": "GHA",
+      "medals": 1
+    },
+    {
+      "country": "VEN",
+      "medals": 1
+    },
+    {
+      "country": "IRQ",
+      "medals": 1
+    },
+    {
+      "country": "SIN",
+      "medals": 1
+    }
+  ],
+  "1964": [
+    {
+      "country": "URS",
+      "medals": 174
+    },
+    {
+      "country": "USA",
+      "medals": 150
+    },
+    {
+      "country": "EUA",
+      "medals": 115
+    },
+    {
+      "country": "JPN",
+      "medals": 64
+    },
+    {
+      "country": "HUN",
+      "medals": 56
+    },
+    {
+      "country": "TCH",
+      "medals": 55
+    },
+    {
+      "country": "ITA",
+      "medals": 50
+    },
+    {
+      "country": "POL",
+      "medals": 48
+    },
+    {
+      "country": "AUS",
+      "medals": 42
+    },
+    {
+      "country": "FRA",
+      "medals": 31
+    },
+    {
+      "country": "NED",
+      "medals": 30
+    },
+    {
+      "country": "GBR",
+      "medals": 28
+    },
+    {
+      "country": "ROU",
+      "medals": 16
+    },
+    {
+      "country": "PAK",
+      "medals": 16
+    },
+    {
+      "country": "YUG",
+      "medals": 15
+    },
+    {
+      "country": "SWE",
+      "medals": 15
+    },
+    {
+      "country": "IND",
+      "medals": 15
+    },
+    {
+      "country": "BRA",
+      "medals": 12
+    },
+    {
+      "country": "DEN",
+      "medals": 12
+    },
+    {
+      "country": "BUL",
+      "medals": 10
+    },
+    {
+      "country": "NZL",
+      "medals": 6
+    },
+    {
+      "country": "TRI",
+      "medals": 6
+    },
+    {
+      "country": "SUI",
+      "medals": 6
+    },
+    {
+      "country": "TUR",
+      "medals": 6
+    },
+    {
+      "country": "CAN",
+      "medals": 5
+    },
+    {
+      "country": "FIN",
+      "medals": 5
+    },
+    {
+      "country": "BEL",
+      "medals": 3
+    },
+    {
+      "country": "KOR",
+      "medals": 3
+    },
+    {
+      "country": "TUN",
+      "medals": 2
+    },
+    {
+      "country": "BAH",
+      "medals": 2
+    },
+    {
+      "country": "IRI",
+      "medals": 2
+    },
+    {
+      "country": "CUB",
+      "medals": 1
+    },
+    {
+      "country": "KEN",
+      "medals": 1
+    },
+    {
+      "country": "ETH",
+      "medals": 1
+    },
+    {
+      "country": "MEX",
+      "medals": 1
+    },
+    {
+      "country": "URU",
+      "medals": 1
+    },
+    {
+      "country": "PHI",
+      "medals": 1
+    },
+    {
+      "country": "IRL",
+      "medals": 1
+    },
+    {
+      "country": "GHA",
+      "medals": 1
+    },
+    {
+      "country": "NGR",
+      "medals": 1
+    },
+    {
+      "country": "ARG",
+      "medals": 1
+    }
+  ],
+  "1968": [
+    {
+      "country": "URS",
+      "medals": 188
+    },
+    {
+      "country": "USA",
+      "medals": 149
+    },
+    {
+      "country": "HUN",
+      "medals": 81
+    },
+    {
+      "country": "JPN",
+      "medals": 67
+    },
+    {
+      "country": "GDR",
+      "medals": 51
+    },
+    {
+      "country": "AUS",
+      "medals": 49
+    },
+    {
+      "country": "FRG",
+      "medals": 49
+    },
+    {
+      "country": "POL",
+      "medals": 37
+    },
+    {
+      "country": "ITA",
+      "medals": 32
+    },
+    {
+      "country": "TCH",
+      "medals": 29
+    },
+    {
+      "country": "YUG",
+      "medals": 29
+    },
+    {
+      "country": "FRA",
+      "medals": 27
+    },
+    {
+      "country": "BUL",
+      "medals": 26
+    },
+    {
+      "country": "ROU",
+      "medals": 23
+    },
+    {
+      "country": "GBR",
+      "medals": 18
+    },
+    {
+      "country": "DEN",
+      "medals": 16
+    },
+    {
+      "country": "IND",
+      "medals": 15
+    },
+    {
+      "country": "NED",
+      "medals": 14
+    },
+    {
+      "country": "SUI",
+      "medals": 13
+    },
+    {
+      "country": "PAK",
+      "medals": 13
+    },
+    {
+      "country": "KEN",
+      "medals": 12
+    },
+    {
+      "country": "CAN",
+      "medals": 10
+    },
+    {
+      "country": "CUB",
+      "medals": 10
+    },
+    {
+      "country": "MEX",
+      "medals": 9
+    },
+    {
+      "country": "SWE",
+      "medals": 9
+    },
+    {
+      "country": "NZL",
+      "medals": 7
+    },
+    {
+      "country": "NOR",
+      "medals": 6
+    },
+    {
+      "country": "AUT",
+      "medals": 5
+    },
+    {
+      "country": "IRI",
+      "medals": 5
+    },
+    {
+      "country": "FIN",
+      "medals": 4
+    },
+    {
+      "country": "BRA",
+      "medals": 4
+    },
+    {
+      "country": "MGL",
+      "medals": 4
+    },
+    {
+      "country": "BEL",
+      "medals": 3
+    },
+    {
+      "country": "TUN",
+      "medals": 2
+    },
+    {
+      "country": "ETH",
+      "medals": 2
+    },
+    {
+      "country": "KOR",
+      "medals": 2
+    },
+    {
+      "country": "UGA",
+      "medals": 2
+    },
+    {
+      "country": "ARG",
+      "medals": 2
+    },
+    {
+      "country": "TUR",
+      "medals": 2
+    },
+    {
+      "country": "JAM",
+      "medals": 1
+    },
+    {
+      "country": "TPE",
+      "medals": 1
+    },
+    {
+      "country": "VEN",
+      "medals": 1
+    },
+    {
+      "country": "CMR",
+      "medals": 1
+    },
+    {
+      "country": "GRE",
+      "medals": 1
+    }
+  ],
+  "1972": [
+    {
+      "country": "URS",
+      "medals": 211
+    },
+    {
+      "country": "USA",
+      "medals": 155
+    },
+    {
+      "country": "GDR",
+      "medals": 148
+    },
+    {
+      "country": "FRG",
+      "medals": 96
+    },
+    {
+      "country": "HUN",
+      "medals": 81
+    },
+    {
+      "country": "JPN",
+      "medals": 56
+    },
+    {
+      "country": "POL",
+      "medals": 46
+    },
+    {
+      "country": "ROU",
+      "medals": 40
+    },
+    {
+      "country": "TCH",
+      "medals": 29
+    },
+    {
+      "country": "GBR",
+      "medals": 29
+    },
+    {
+      "country": "ITA",
+      "medals": 25
+    },
+    {
+      "country": "CUB",
+      "medals": 22
+    },
+    {
+      "country": "FRA",
+      "medals": 22
+    },
+    {
+      "country": "BUL",
+      "medals": 22
+    },
+    {
+      "country": "SWE",
+      "medals": 21
+    },
+    {
+      "country": "AUS",
+      "medals": 20
+    },
+    {
+      "country": "YUG",
+      "medals": 18
+    },
+    {
+      "country": "PRK",
+      "medals": 15
+    },
+    {
+      "country": "PAK",
+      "medals": 15
+    },
+    {
+      "country": "NZL",
+      "medals": 14
+    },
+    {
+      "country": "IND",
+      "medals": 14
+    },
+    {
+      "country": "KEN",
+      "medals": 12
+    },
+    {
+      "country": "CAN",
+      "medals": 10
+    },
+    {
+      "country": "FIN",
+      "medals": 10
+    },
+    {
+      "country": "NOR",
+      "medals": 8
+    },
+    {
+      "country": "SUI",
+      "medals": 8
+    },
+    {
+      "country": "NED",
+      "medals": 6
+    },
+    {
+      "country": "AUT",
+      "medals": 3
+    },
+    {
+      "country": "COL",
+      "medals": 3
+    },
+    {
+      "country": "IRI",
+      "medals": 3
+    },
+    {
+      "country": "ETH",
+      "medals": 2
+    },
+    {
+      "country": "BEL",
+      "medals": 2
+    },
+    {
+      "country": "UGA",
+      "medals": 2
+    },
+    {
+      "country": "BRA",
+      "medals": 2
+    },
+    {
+      "country": "GRE",
+      "medals": 2
+    },
+    {
+      "country": "JAM",
+      "medals": 1
+    },
+    {
+      "country": "TUN",
+      "medals": 1
+    },
+    {
+      "country": "ESP",
+      "medals": 1
+    },
+    {
+      "country": "MEX",
+      "medals": 1
+    },
+    {
+      "country": "NIG",
+      "medals": 1
+    },
+    {
+      "country": "GHA",
+      "medals": 1
+    },
+    {
+      "country": "NGR",
+      "medals": 1
+    },
+    {
+      "country": "DEN",
+      "medals": 1
+    },
+    {
+      "country": "KOR",
+      "medals": 1
+    },
+    {
+      "country": "ARG",
+      "medals": 1
+    },
+    {
+      "country": "LIB",
+      "medals": 1
+    },
+    {
+      "country": "TUR",
+      "medals": 1
+    },
+    {
+      "country": "MGL",
+      "medals": 1
+    }
+  ],
+  "1976": [
+    {
+      "country": "URS",
+      "medals": 285
+    },
+    {
+      "country": "GDR",
+      "medals": 192
+    },
+    {
+      "country": "USA",
+      "medals": 155
+    },
+    {
+      "country": "FRG",
+      "medals": 75
+    },
+    {
+      "country": "POL",
+      "medals": 73
+    },
+    {
+      "country": "HUN",
+      "medals": 55
+    },
+    {
+      "country": "ROU",
+      "medals": 55
+    },
+    {
+      "country": "JPN",
+      "medals": 41
+    },
+    {
+      "country": "BUL",
+      "medals": 39
+    },
+    {
+      "country": "GBR",
+      "medals": 32
+    },
+    {
+      "country": "ITA",
+      "medals": 31
+    },
+    {
+      "country": "NZL",
+      "medals": 27
+    },
+    {
+      "country": "AUS",
+      "medals": 24
+    },
+    {
+      "country": "CUB",
+      "medals": 24
+    },
+    {
+      "country": "CAN",
+      "medals": 20
+    },
+    {
+      "country": "FRA",
+      "medals": 20
+    },
+    {
+      "country": "YUG",
+      "medals": 19
+    },
+    {
+      "country": "KOR",
+      "medals": 17
+    },
+    {
+      "country": "PAK",
+      "medals": 16
+    },
+    {
+      "country": "NED",
+      "medals": 15
+    },
+    {
+      "country": "TCH",
+      "medals": 15
+    },
+    {
+      "country": "SWE",
+      "medals": 10
+    },
+    {
+      "country": "SUI",
+      "medals": 10
+    },
+    {
+      "country": "BEL",
+      "medals": 9
+    },
+    {
+      "country": "DEN",
+      "medals": 8
+    },
+    {
+      "country": "FIN",
+      "medals": 6
+    },
+    {
+      "country": "ESP",
+      "medals": 6
+    },
+    {
+      "country": "NOR",
+      "medals": 6
+    },
+    {
+      "country": "BRA",
+      "medals": 3
+    },
+    {
+      "country": "POR",
+      "medals": 2
+    },
+    {
+      "country": "JAM",
+      "medals": 2
+    },
+    {
+      "country": "MEX",
+      "medals": 2
+    },
+    {
+      "country": "PRK",
+      "medals": 2
+    },
+    {
+      "country": "IRI",
+      "medals": 2
+    },
+    {
+      "country": "TRI",
+      "medals": 1
+    },
+    {
+      "country": "PUR",
+      "medals": 1
+    },
+    {
+      "country": "THA",
+      "medals": 1
+    },
+    {
+      "country": "BER",
+      "medals": 1
+    },
+    {
+      "country": "VEN",
+      "medals": 1
+    },
+    {
+      "country": "AUT",
+      "medals": 1
+    },
+    {
+      "country": "MGL",
+      "medals": 1
+    }
+  ],
+  "1980": [
+    {
+      "country": "URS",
+      "medals": 442
+    },
+    {
+      "country": "GDR",
+      "medals": 260
+    },
+    {
+      "country": "BUL",
+      "medals": 94
+    },
+    {
+      "country": "ROU",
+      "medals": 72
+    },
+    {
+      "country": "HUN",
+      "medals": 61
+    },
+    {
+      "country": "YUG",
+      "medals": 57
+    },
+    {
+      "country": "TCH",
+      "medals": 52
+    },
+    {
+      "country": "POL",
+      "medals": 50
+    },
+    {
+      "country": "GBR",
+      "medals": 45
+    },
+    {
+      "country": "ITA",
+      "medals": 37
+    },
+    {
+      "country": "FRA",
+      "medals": 29
+    },
+    {
+      "country": "ESP",
+      "medals": 24
+    },
+    {
+      "country": "CUB",
+      "medals": 20
+    },
+    {
+      "country": "SWE",
+      "medals": 18
+    },
+    {
+      "country": "IND",
+      "medals": 16
+    },
+    {
+      "country": "ZIM",
+      "medals": 16
+    },
+    {
+      "country": "MEX",
+      "medals": 12
+    },
+    {
+      "country": "AUS",
+      "medals": 12
+    },
+    {
+      "country": "BRA",
+      "medals": 9
+    },
+    {
+      "country": "FIN",
+      "medals": 9
+    },
+    {
+      "country": "DEN",
+      "medals": 8
+    },
+    {
+      "country": "NED",
+      "medals": 6
+    },
+    {
+      "country": "PRK",
+      "medals": 5
+    },
+    {
+      "country": "AUT",
+      "medals": 5
+    },
+    {
+      "country": "GRE",
+      "medals": 5
+    },
+    {
+      "country": "ETH",
+      "medals": 4
+    },
+    {
+      "country": "MGL",
+      "medals": 4
+    },
+    {
+      "country": "JAM",
+      "medals": 3
+    },
+    {
+      "country": "IRL",
+      "medals": 3
+    },
+    {
+      "country": "TAN",
+      "medals": 2
+    },
+    {
+      "country": "SUI",
+      "medals": 2
+    },
+    {
+      "country": "GUY",
+      "medals": 1
+    },
+    {
+      "country": "VEN",
+      "medals": 1
+    },
+    {
+      "country": "UGA",
+      "medals": 1
+    },
+    {
+      "country": "BEL",
+      "medals": 1
+    },
+    {
+      "country": "LIB",
+      "medals": 1
+    }
+  ],
+  "1984": [
+    {
+      "country": "USA",
+      "medals": 333
+    },
+    {
+      "country": "FRG",
+      "medals": 157
+    },
+    {
+      "country": "ROU",
+      "medals": 106
+    },
+    {
+      "country": "YUG",
+      "medals": 87
+    },
+    {
+      "country": "CAN",
+      "medals": 86
+    },
+    {
+      "country": "CHN",
+      "medals": 76
+    },
+    {
+      "country": "GBR",
+      "medals": 72
+    },
+    {
+      "country": "FRA",
+      "medals": 68
+    },
+    {
+      "country": "ITA",
+      "medals": 63
+    },
+    {
+      "country": "AUS",
+      "medals": 50
+    },
+    {
+      "country": "JPN",
+      "medals": 49
+    },
+    {
+      "country": "KOR",
+      "medals": 42
+    },
+    {
+      "country": "NED",
+      "medals": 40
+    },
+    {
+      "country": "BRA",
+      "medals": 37
+    },
+    {
+      "country": "SWE",
+      "medals": 32
+    },
+    {
+      "country": "NZL",
+      "medals": 23
+    },
+    {
+      "country": "ESP",
+      "medals": 19
+    },
+    {
+      "country": "PAK",
+      "medals": 16
+    },
+    {
+      "country": "SUI",
+      "medals": 15
+    },
+    {
+      "country": "DEN",
+      "medals": 15
+    },
+    {
+      "country": "FIN",
+      "medals": 12
+    },
+    {
+      "country": "JAM",
+      "medals": 6
+    },
+    {
+      "country": "MEX",
+      "medals": 6
+    },
+    {
+      "country": "BEL",
+      "medals": 5
+    },
+    {
+      "country": "NGR",
+      "medals": 5
+    },
+    {
+      "country": "NOR",
+      "medals": 4
+    },
+    {
+      "country": "VEN",
+      "medals": 3
+    },
+    {
+      "country": "KEN",
+      "medals": 3
+    },
+    {
+      "country": "POR",
+      "medals": 3
+    },
+    {
+      "country": "TUR",
+      "medals": 3
+    },
+    {
+      "country": "AUT",
+      "medals": 3
+    },
+    {
+      "country": "MAR",
+      "medals": 2
+    },
+    {
+      "country": "PUR",
+      "medals": 2
+    },
+    {
+      "country": "ALG",
+      "medals": 2
+    },
+    {
+      "country": "GRE",
+      "medals": 2
+    },
+    {
+      "country": "CIV",
+      "medals": 1
+    },
+    {
+      "country": "IRL",
+      "medals": 1
+    },
+    {
+      "country": "ZAM",
+      "medals": 1
+    },
+    {
+      "country": "DOM",
+      "medals": 1
+    },
+    {
+      "country": "CMR",
+      "medals": 1
+    },
+    {
+      "country": "THA",
+      "medals": 1
+    },
+    {
+      "country": "ISL",
+      "medals": 1
+    },
+    {
+      "country": "EGY",
+      "medals": 1
+    },
+    {
+      "country": "COL",
+      "medals": 1
+    },
+    {
+      "country": "PER",
+      "medals": 1
+    },
+    {
+      "country": "TPE",
+      "medals": 1
+    },
+    {
+      "country": "SYR",
+      "medals": 1
+    }
+  ],
+  "1988": [
+    {
+      "country": "URS",
+      "medals": 294
+    },
+    {
+      "country": "USA",
+      "medals": 193
+    },
+    {
+      "country": "GDR",
+      "medals": 174
+    },
+    {
+      "country": "FRG",
+      "medals": 113
+    },
+    {
+      "country": "KOR",
+      "medals": 77
+    },
+    {
+      "country": "YUG",
+      "medals": 63
+    },
+    {
+      "country": "CHN",
+      "medals": 53
+    },
+    {
+      "country": "GBR",
+      "medals": 53
+    },
+    {
+      "country": "ROU",
+      "medals": 51
+    },
+    {
+      "country": "HUN",
+      "medals": 44
+    },
+    {
+      "country": "NED",
+      "medals": 44
+    },
+    {
+      "country": "BUL",
+      "medals": 41
+    },
+    {
+      "country": "AUS",
+      "medals": 34
+    },
+    {
+      "country": "FRA",
+      "medals": 29
+    },
+    {
+      "country": "ITA",
+      "medals": 29
+    },
+    {
+      "country": "BRA",
+      "medals": 28
+    },
+    {
+      "country": "NZL",
+      "medals": 24
+    },
+    {
+      "country": "NOR",
+      "medals": 23
+    },
+    {
+      "country": "POL",
+      "medals": 21
+    },
+    {
+      "country": "CAN",
+      "medals": 21
+    },
+    {
+      "country": "JPN",
+      "medals": 20
+    },
+    {
+      "country": "SWE",
+      "medals": 16
+    },
+    {
+      "country": "ARG",
+      "medals": 13
+    },
+    {
+      "country": "PER",
+      "medals": 12
+    },
+    {
+      "country": "TCH",
+      "medals": 10
+    },
+    {
+      "country": "KEN",
+      "medals": 9
+    },
+    {
+      "country": "SUI",
+      "medals": 8
+    },
+    {
+      "country": "DEN",
+      "medals": 7
+    },
+    {
+      "country": "ESP",
+      "medals": 5
+    },
+    {
+      "country": "JAM",
+      "medals": 5
+    },
+    {
+      "country": "FIN",
+      "medals": 4
+    },
+    {
+      "country": "INA",
+      "medals": 3
+    },
+    {
+      "country": "MAR",
+      "medals": 3
+    },
+    {
+      "country": "MEX",
+      "medals": 2
+    },
+    {
+      "country": "BEL",
+      "medals": 2
+    },
+    {
+      "country": "TUR",
+      "medals": 2
+    },
+    {
+      "country": "SUR",
+      "medals": 1
+    },
+    {
+      "country": "CRC",
+      "medals": 1
+    },
+    {
+      "country": "SEN",
+      "medals": 1
+    },
+    {
+      "country": "DJI",
+      "medals": 1
+    },
+    {
+      "country": "POR",
+      "medals": 1
+    },
+    {
+      "country": "PHI",
+      "medals": 1
+    },
+    {
+      "country": "COL",
+      "medals": 1
+    },
+    {
+      "country": "THA",
+      "medals": 1
+    },
+    {
+      "country": "MGL",
+      "medals": 1
+    },
+    {
+      "country": "PAK",
+      "medals": 1
+    },
+    {
+      "country": "AUT",
+      "medals": 1
+    },
+    {
+      "country": "AHO",
+      "medals": 1
+    },
+    {
+      "country": "ISV",
+      "medals": 1
+    },
+    {
+      "country": "CHI",
+      "medals": 1
+    },
+    {
+      "country": "IRI",
+      "medals": 1
+    },
+    {
+      "country": "GRE",
+      "medals": 1
+    }
+  ],
+  "1992": [
+    {
+      "country": "USA",
+      "medals": 224
+    },
+    {
+      "country": "EUN",
+      "medals": 223
+    },
+    {
+      "country": "GER",
+      "medals": 198
+    },
+    {
+      "country": "CHN",
+      "medals": 83
+    },
+    {
+      "country": "CUB",
+      "medals": 71
+    },
+    {
+      "country": "ESP",
+      "medals": 66
+    },
+    {
+      "country": "AUS",
+      "medals": 57
+    },
+    {
+      "country": "FRA",
+      "medals": 57
+    },
+    {
+      "country": "ROU",
+      "medals": 53
+    },
+    {
+      "country": "GBR",
+      "medals": 50
+    },
+    {
+      "country": "KOR",
+      "medals": 49
+    },
+    {
+      "country": "JPN",
+      "medals": 47
+    },
+    {
+      "country": "ITA",
+      "medals": 46
+    },
+    {
+      "country": "HUN",
+      "medals": 45
+    },
+    {
+      "country": "CAN",
+      "medals": 44
+    },
+    {
+      "country": "POL",
+      "medals": 42
+    },
+    {
+      "country": "SWE",
+      "medals": 35
+    },
+    {
+      "country": "NED",
+      "medals": 33
+    },
+    {
+      "country": "NOR",
+      "medals": 23
+    },
+    {
+      "country": "TPE",
+      "medals": 20
+    },
+    {
+      "country": "BUL",
+      "medals": 17
+    },
+    {
+      "country": "PAK",
+      "medals": 16
+    },
+    {
+      "country": "NZL",
+      "medals": 15
+    },
+    {
+      "country": "CRO",
+      "medals": 15
+    },
+    {
+      "country": "BRA",
+      "medals": 14
+    },
+    {
+      "country": "DEN",
+      "medals": 14
+    },
+    {
+      "country": "LTU",
+      "medals": 13
+    },
+    {
+      "country": "GHA",
+      "medals": 13
+    },
+    {
+      "country": "NGR",
+      "medals": 11
+    },
+    {
+      "country": "PRK",
+      "medals": 10
+    },
+    {
+      "country": "KEN",
+      "medals": 8
+    },
+    {
+      "country": "TCH",
+      "medals": 8
+    },
+    {
+      "country": "FIN",
+      "medals": 7
+    },
+    {
+      "country": "INA",
+      "medals": 6
+    },
+    {
+      "country": "AUT",
+      "medals": 6
+    },
+    {
+      "country": "TUR",
+      "medals": 6
+    },
+    {
+      "country": "SLO",
+      "medals": 6
+    },
+    {
+      "country": "JAM",
+      "medals": 4
+    },
+    {
+      "country": "ETH",
+      "medals": 3
+    },
+    {
+      "country": "MAR",
+      "medals": 3
+    },
+    {
+      "country": "RSA",
+      "medals": 3
+    },
+    {
+      "country": "LAT",
+      "medals": 3
+    },
+    {
+      "country": "BEL",
+      "medals": 3
+    },
+    {
+      "country": "EST",
+      "medals": 3
+    },
+    {
+      "country": "IOP",
+      "medals": 3
+    },
+    {
+      "country": "IRI",
+      "medals": 3
+    },
+    {
+      "country": "NAM",
+      "medals": 2
+    },
+    {
+      "country": "GRE",
+      "medals": 2
+    },
+    {
+      "country": "ALG",
+      "medals": 2
+    },
+    {
+      "country": "MAS",
+      "medals": 2
+    },
+    {
+      "country": "IRL",
+      "medals": 2
+    },
+    {
+      "country": "MGL",
+      "medals": 2
+    },
+    {
+      "country": "ISR",
+      "medals": 2
+    },
+    {
+      "country": "ARG",
+      "medals": 2
+    },
+    {
+      "country": "SUR",
+      "medals": 1
+    },
+    {
+      "country": "QAT",
+      "medals": 1
+    },
+    {
+      "country": "COL",
+      "medals": 1
+    },
+    {
+      "country": "MEX",
+      "medals": 1
+    },
+    {
+      "country": "BAH",
+      "medals": 1
+    },
+    {
+      "country": "PHI",
+      "medals": 1
+    },
+    {
+      "country": "PUR",
+      "medals": 1
+    },
+    {
+      "country": "THA",
+      "medals": 1
+    },
+    {
+      "country": "PER",
+      "medals": 1
+    },
+    {
+      "country": "SUI",
+      "medals": 1
+    }
+  ],
+  "1996": [
+    {
+      "country": "USA",
+      "medals": 260
+    },
+    {
+      "country": "AUS",
+      "medals": 132
+    },
+    {
+      "country": "GER",
+      "medals": 124
+    },
+    {
+      "country": "RUS",
+      "medals": 115
+    },
+    {
+      "country": "CHN",
+      "medals": 110
+    },
+    {
+      "country": "NED",
+      "medals": 73
+    },
+    {
+      "country": "ITA",
+      "medals": 71
+    },
+    {
+      "country": "ESP",
+      "medals": 67
+    },
+    {
+      "country": "KOR",
+      "medals": 66
+    },
+    {
+      "country": "BRA",
+      "medals": 64
+    },
+    {
+      "country": "CUB",
+      "medals": 57
+    },
+    {
+      "country": "CAN",
+      "medals": 51
+    },
+    {
+      "country": "FRA",
+      "medals": 51
+    },
+    {
+      "country": "HUN",
+      "medals": 43
+    },
+    {
+      "country": "JPN",
+      "medals": 43
+    },
+    {
+      "country": "ROU",
+      "medals": 38
+    },
+    {
+      "country": "UKR",
+      "medals": 34
+    },
+    {
+      "country": "SWE",
+      "medals": 31
+    },
+    {
+      "country": "CRO",
+      "medals": 29
+    },
+    {
+      "country": "GBR",
+      "medals": 26
+    },
+    {
+      "country": "NGR",
+      "medals": 26
+    },
+    {
+      "country": "YUG",
+      "medals": 26
+    },
+    {
+      "country": "NOR",
+      "medals": 25
+    },
+    {
+      "country": "DEN",
+      "medals": 24
+    },
+    {
+      "country": "BLR",
+      "medals": 23
+    },
+    {
+      "country": "POL",
+      "medals": 21
+    },
+    {
+      "country": "BUL",
+      "medals": 21
+    },
+    {
+      "country": "ARG",
+      "medals": 20
+    },
+    {
+      "country": "JAM",
+      "medals": 16
+    },
+    {
+      "country": "CZE",
+      "medals": 13
+    },
+    {
+      "country": "LTU",
+      "medals": 12
+    },
+    {
+      "country": "KAZ",
+      "medals": 11
+    },
+    {
+      "country": "SUI",
+      "medals": 11
+    },
+    {
+      "country": "NZL",
+      "medals": 9
+    },
+    {
+      "country": "KEN",
+      "medals": 8
+    },
+    {
+      "country": "GRE",
+      "medals": 8
+    },
+    {
+      "country": "BEL",
+      "medals": 6
+    },
+    {
+      "country": "INA",
+      "medals": 6
+    },
+    {
+      "country": "TUR",
+      "medals": 6
+    },
+    {
+      "country": "RSA",
+      "medals": 5
+    },
+    {
+      "country": "BAH",
+      "medals": 5
+    },
+    {
+      "country": "PRK",
+      "medals": 5
+    },
+    {
+      "country": "IRL",
+      "medals": 4
+    },
+    {
+      "country": "FIN",
+      "medals": 4
+    },
+    {
+      "country": "ETH",
+      "medals": 3
+    },
+    {
+      "country": "POR",
+      "medals": 3
+    },
+    {
+      "country": "ALG",
+      "medals": 3
+    },
+    {
+      "country": "AUT",
+      "medals": 3
+    },
+    {
+      "country": "MAS",
+      "medals": 3
+    },
+    {
+      "country": "SVK",
+      "medals": 3
+    },
+    {
+      "country": "MDA",
+      "medals": 3
+    },
+    {
+      "country": "IRI",
+      "medals": 3
+    },
+    {
+      "country": "MAR",
+      "medals": 2
+    },
+    {
+      "country": "TRI",
+      "medals": 2
+    },
+    {
+      "country": "NAM",
+      "medals": 2
+    },
+    {
+      "country": "SLO",
+      "medals": 2
+    },
+    {
+      "country": "THA",
+      "medals": 2
+    },
+    {
+      "country": "UZB",
+      "medals": 2
+    },
+    {
+      "country": "GEO",
+      "medals": 2
+    },
+    {
+      "country": "ARM",
+      "medals": 2
+    },
+    {
+      "country": "CRC",
+      "medals": 1
+    },
+    {
+      "country": "MEX",
+      "medals": 1
+    },
+    {
+      "country": "ECU",
+      "medals": 1
+    },
+    {
+      "country": "UGA",
+      "medals": 1
+    },
+    {
+      "country": "ZAM",
+      "medals": 1
+    },
+    {
+      "country": "BDI",
+      "medals": 1
+    },
+    {
+      "country": "MOZ",
+      "medals": 1
+    },
+    {
+      "country": "SYR",
+      "medals": 1
+    },
+    {
+      "country": "PHI",
+      "medals": 1
+    },
+    {
+      "country": "TGA",
+      "medals": 1
+    },
+    {
+      "country": "TUN",
+      "medals": 1
+    },
+    {
+      "country": "PUR",
+      "medals": 1
+    },
+    {
+      "country": "LAT",
+      "medals": 1
+    },
+    {
+      "country": "MGL",
+      "medals": 1
+    },
+    {
+      "country": "ISR",
+      "medals": 1
+    },
+    {
+      "country": "HKG",
+      "medals": 1
+    },
+    {
+      "country": "TPE",
+      "medals": 1
+    },
+    {
+      "country": "IND",
+      "medals": 1
+    },
+    {
+      "country": "AZE",
+      "medals": 1
+    }
+  ],
+  "2000": [
+    {
+      "country": "USA",
+      "medals": 248
+    },
+    {
+      "country": "RUS",
+      "medals": 188
+    },
+    {
+      "country": "AUS",
+      "medals": 183
+    },
+    {
+      "country": "GER",
+      "medals": 119
+    },
+    {
+      "country": "CHN",
+      "medals": 79
+    },
+    {
+      "country": "NED",
+      "medals": 79
+    },
+    {
+      "country": "KOR",
+      "medals": 73
+    },
+    {
+      "country": "CUB",
+      "medals": 69
+    },
+    {
+      "country": "FRA",
+      "medals": 66
+    },
+    {
+      "country": "ITA",
+      "medals": 65
+    },
+    {
+      "country": "GBR",
+      "medals": 55
+    },
+    {
+      "country": "HUN",
+      "medals": 53
+    },
+    {
+      "country": "BRA",
+      "medals": 48
+    },
+    {
+      "country": "ROU",
+      "medals": 46
+    },
+    {
+      "country": "NOR",
+      "medals": 44
+    },
+    {
+      "country": "ESP",
+      "medals": 43
+    },
+    {
+      "country": "JPN",
+      "medals": 43
+    },
+    {
+      "country": "UKR",
+      "medals": 35
+    },
+    {
+      "country": "SWE",
+      "medals": 32
+    },
+    {
+      "country": "CAN",
+      "medals": 31
+    },
+    {
+      "country": "YUG",
+      "medals": 26
+    },
+    {
+      "country": "DEN",
+      "medals": 25
+    },
+    {
+      "country": "POL",
+      "medals": 24
+    },
+    {
+      "country": "JAM",
+      "medals": 23
+    },
+    {
+      "country": "BLR",
+      "medals": 22
+    },
+    {
+      "country": "ARG",
+      "medals": 20
+    },
+    {
+      "country": "GRE",
+      "medals": 18
+    },
+    {
+      "country": "CHI",
+      "medals": 18
+    },
+    {
+      "country": "CMR",
+      "medals": 18
+    },
+    {
+      "country": "LTU",
+      "medals": 17
+    },
+    {
+      "country": "SUI",
+      "medals": 14
+    },
+    {
+      "country": "BUL",
+      "medals": 13
+    },
+    {
+      "country": "CRO",
+      "medals": 10
+    },
+    {
+      "country": "CZE",
+      "medals": 9
+    },
+    {
+      "country": "ETH",
+      "medals": 8
+    },
+    {
+      "country": "NGR",
+      "medals": 8
+    },
+    {
+      "country": "INA",
+      "medals": 8
+    },
+    {
+      "country": "KEN",
+      "medals": 7
+    },
+    {
+      "country": "KAZ",
+      "medals": 7
+    },
+    {
+      "country": "BEL",
+      "medals": 7
+    },
+    {
+      "country": "MEX",
+      "medals": 6
+    },
+    {
+      "country": "SVK",
+      "medals": 6
+    },
+    {
+      "country": "BAH",
+      "medals": 6
+    },
+    {
+      "country": "GEO",
+      "medals": 6
+    },
+    {
+      "country": "RSA",
+      "medals": 5
+    },
+    {
+      "country": "MAR",
+      "medals": 5
+    },
+    {
+      "country": "ALG",
+      "medals": 5
+    },
+    {
+      "country": "FIN",
+      "medals": 5
+    },
+    {
+      "country": "TUR",
+      "medals": 5
+    },
+    {
+      "country": "TPE",
+      "medals": 5
+    },
+    {
+      "country": "AUT",
+      "medals": 4
+    },
+    {
+      "country": "PRK",
+      "medals": 4
+    },
+    {
+      "country": "UZB",
+      "medals": 4
+    },
+    {
+      "country": "NZL",
+      "medals": 4
+    },
+    {
+      "country": "IRI",
+      "medals": 4
+    },
+    {
+      "country": "LAT",
+      "medals": 3
+    },
+    {
+      "country": "EST",
+      "medals": 3
+    },
+    {
+      "country": "THA",
+      "medals": 3
+    },
+    {
+      "country": "AZE",
+      "medals": 3
+    },
+    {
+      "country": "SLO",
+      "medals": 3
+    },
+    {
+      "country": "CRC",
+      "medals": 2
+    },
+    {
+      "country": "POR",
+      "medals": 2
+    },
+    {
+      "country": "TRI",
+      "medals": 2
+    },
+    {
+      "country": "KSA",
+      "medals": 2
+    },
+    {
+      "country": "MDA",
+      "medals": 2
+    },
+    {
+      "country": "BAR",
+      "medals": 1
+    },
+    {
+      "country": "SRI",
+      "medals": 1
+    },
+    {
+      "country": "IRL",
+      "medals": 1
+    },
+    {
+      "country": "MOZ",
+      "medals": 1
+    },
+    {
+      "country": "ISL",
+      "medals": 1
+    },
+    {
+      "country": "ISR",
+      "medals": 1
+    },
+    {
+      "country": "URU",
+      "medals": 1
+    },
+    {
+      "country": "KGZ",
+      "medals": 1
+    },
+    {
+      "country": "KUW",
+      "medals": 1
+    },
+    {
+      "country": "VIE",
+      "medals": 1
+    },
+    {
+      "country": "QAT",
+      "medals": 1
+    },
+    {
+      "country": "IND",
+      "medals": 1
+    },
+    {
+      "country": "COL",
+      "medals": 1
+    },
+    {
+      "country": "ARM",
+      "medals": 1
+    },
+    {
+      "country": "MKD",
+      "medals": 1
+    }
+  ],
+  "2004": [
+    {
+      "country": "USA",
+      "medals": 264
+    },
+    {
+      "country": "RUS",
+      "medals": 192
+    },
+    {
+      "country": "AUS",
+      "medals": 157
+    },
+    {
+      "country": "GER",
+      "medals": 149
+    },
+    {
+      "country": "ITA",
+      "medals": 102
+    },
+    {
+      "country": "CHN",
+      "medals": 94
+    },
+    {
+      "country": "JPN",
+      "medals": 94
+    },
+    {
+      "country": "NED",
+      "medals": 76
+    },
+    {
+      "country": "CUB",
+      "medals": 61
+    },
+    {
+      "country": "GBR",
+      "medals": 57
+    },
+    {
+      "country": "FRA",
+      "medals": 53
+    },
+    {
+      "country": "KOR",
+      "medals": 52
+    },
+    {
+      "country": "UKR",
+      "medals": 48
+    },
+    {
+      "country": "ARG",
+      "medals": 47
+    },
+    {
+      "country": "HUN",
+      "medals": 40
+    },
+    {
+      "country": "BRA",
+      "medals": 40
+    },
+    {
+      "country": "ROU",
+      "medals": 39
+    },
+    {
+      "country": "GRE",
+      "medals": 31
+    },
+    {
+      "country": "DEN",
+      "medals": 29
+    },
+    {
+      "country": "ESP",
+      "medals": 27
+    },
+    {
+      "country": "CRO",
+      "medals": 20
+    },
+    {
+      "country": "CAN",
+      "medals": 17
+    },
+    {
+      "country": "BLR",
+      "medals": 17
+    },
+    {
+      "country": "BUL",
+      "medals": 17
+    },
+    {
+      "country": "PAR",
+      "medals": 17
+    },
+    {
+      "country": "SCG",
+      "medals": 14
+    },
+    {
+      "country": "JAM",
+      "medals": 13
+    },
+    {
+      "country": "POL",
+      "medals": 12
+    },
+    {
+      "country": "CZE",
+      "medals": 12
+    },
+    {
+      "country": "SWE",
+      "medals": 12
+    },
+    {
+      "country": "RSA",
+      "medals": 10
+    },
+    {
+      "country": "TUR",
+      "medals": 10
+    },
+    {
+      "country": "SVK",
+      "medals": 10
+    },
+    {
+      "country": "TPE",
+      "medals": 9
+    },
+    {
+      "country": "AUT",
+      "medals": 8
+    },
+    {
+      "country": "NGR",
+      "medals": 8
+    },
+    {
+      "country": "KAZ",
+      "medals": 8
+    },
+    {
+      "country": "THA",
+      "medals": 8
+    },
+    {
+      "country": "ETH",
+      "medals": 7
+    },
+    {
+      "country": "KEN",
+      "medals": 7
+    },
+    {
+      "country": "NOR",
+      "medals": 7
+    },
+    {
+      "country": "SUI",
+      "medals": 7
+    },
+    {
+      "country": "NZL",
+      "medals": 6
+    },
+    {
+      "country": "IRI",
+      "medals": 6
+    },
+    {
+      "country": "SLO",
+      "medals": 5
+    },
+    {
+      "country": "INA",
+      "medals": 5
+    },
+    {
+      "country": "EGY",
+      "medals": 5
+    },
+    {
+      "country": "AZE",
+      "medals": 5
+    },
+    {
+      "country": "UZB",
+      "medals": 5
+    },
+    {
+      "country": "PRK",
+      "medals": 5
+    },
+    {
+      "country": "MEX",
+      "medals": 4
+    },
+    {
+      "country": "LAT",
+      "medals": 4
+    },
+    {
+      "country": "GEO",
+      "medals": 4
+    },
+    {
+      "country": "CHI",
+      "medals": 4
+    },
+    {
+      "country": "ZIM",
+      "medals": 3
+    },
+    {
+      "country": "POR",
+      "medals": 3
+    },
+    {
+      "country": "MAR",
+      "medals": 3
+    },
+    {
+      "country": "EST",
+      "medals": 3
+    },
+    {
+      "country": "LTU",
+      "medals": 3
+    },
+    {
+      "country": "BEL",
+      "medals": 3
+    },
+    {
+      "country": "BAH",
+      "medals": 2
+    },
+    {
+      "country": "COL",
+      "medals": 2
+    },
+    {
+      "country": "ISR",
+      "medals": 2
+    },
+    {
+      "country": "FIN",
+      "medals": 2
+    },
+    {
+      "country": "HKG",
+      "medals": 2
+    },
+    {
+      "country": "VEN",
+      "medals": 2
+    },
+    {
+      "country": "TRI",
+      "medals": 1
+    },
+    {
+      "country": "ERI",
+      "medals": 1
+    },
+    {
+      "country": "DOM",
+      "medals": 1
+    },
+    {
+      "country": "CMR",
+      "medals": 1
+    },
+    {
+      "country": "SYR",
+      "medals": 1
+    },
+    {
+      "country": "MGL",
+      "medals": 1
+    },
+    {
+      "country": "UAE",
+      "medals": 1
+    },
+    {
+      "country": "IND",
+      "medals": 1
+    }
+  ],
+  "2008": [
+    {
+      "country": "USA",
+      "medals": 315
+    },
+    {
+      "country": "CHN",
+      "medals": 184
+    },
+    {
+      "country": "AUS",
+      "medals": 149
+    },
+    {
+      "country": "RUS",
+      "medals": 143
+    },
+    {
+      "country": "GER",
+      "medals": 101
+    },
+    {
+      "country": "KOR",
+      "medals": 78
+    },
+    {
+      "country": "GBR",
+      "medals": 77
+    },
+    {
+      "country": "FRA",
+      "medals": 76
+    },
+    {
+      "country": "BRA",
+      "medals": 75
+    },
+    {
+      "country": "ESP",
+      "medals": 71
+    },
+    {
+      "country": "NED",
+      "medals": 62
+    },
+    {
+      "country": "JPN",
+      "medals": 51
+    },
+    {
+      "country": "ARG",
+      "medals": 51
+    },
+    {
+      "country": "CUB",
+      "medals": 47
+    },
+    {
+      "country": "ITA",
+      "medals": 42
+    },
+    {
+      "country": "CAN",
+      "medals": 34
+    },
+    {
+      "country": "UKR",
+      "medals": 31
+    },
+    {
+      "country": "BLR",
+      "medals": 30
+    },
+    {
+      "country": "HUN",
+      "medals": 27
+    },
+    {
+      "country": "NGR",
+      "medals": 24
+    },
+    {
+      "country": "NOR",
+      "medals": 22
+    },
+    {
+      "country": "ROU",
+      "medals": 22
+    },
+    {
+      "country": "POL",
+      "medals": 20
+    },
+    {
+      "country": "DEN",
+      "medals": 18
+    },
+    {
+      "country": "JAM",
+      "medals": 17
+    },
+    {
+      "country": "SRB",
+      "medals": 15
+    },
+    {
+      "country": "KEN",
+      "medals": 14
+    },
+    {
+      "country": "NZL",
+      "medals": 14
+    },
+    {
+      "country": "ISL",
+      "medals": 14
+    },
+    {
+      "country": "KAZ",
+      "medals": 13
+    },
+    {
+      "country": "SUI",
+      "medals": 11
+    },
+    {
+      "country": "SVK",
+      "medals": 10
+    },
+    {
+      "country": "TUR",
+      "medals": 8
+    },
+    {
+      "country": "ETH",
+      "medals": 7
+    },
+    {
+      "country": "CZE",
+      "medals": 7
+    },
+    {
+      "country": "GRE",
+      "medals": 7
+    },
+    {
+      "country": "INA",
+      "medals": 7
+    },
+    {
+      "country": "AZE",
+      "medals": 7
+    },
+    {
+      "country": "SWE",
+      "medals": 7
+    },
+    {
+      "country": "ARM",
+      "medals": 6
+    },
+    {
+      "country": "UZB",
+      "medals": 6
+    },
+    {
+      "country": "PRK",
+      "medals": 6
+    },
+    {
+      "country": "GEO",
+      "medals": 6
+    },
+    {
+      "country": "SLO",
+      "medals": 5
+    },
+    {
+      "country": "TRI",
+      "medals": 5
+    },
+    {
+      "country": "BEL",
+      "medals": 5
+    },
+    {
+      "country": "BAH",
+      "medals": 5
+    },
+    {
+      "country": "LTU",
+      "medals": 5
+    },
+    {
+      "country": "CRO",
+      "medals": 5
+    },
+    {
+      "country": "FIN",
+      "medals": 5
+    },
+    {
+      "country": "BUL",
+      "medals": 5
+    },
+    {
+      "country": "MEX",
+      "medals": 4
+    },
+    {
+      "country": "ZIM",
+      "medals": 4
+    },
+    {
+      "country": "THA",
+      "medals": 4
+    },
+    {
+      "country": "MGL",
+      "medals": 4
+    },
+    {
+      "country": "TPE",
+      "medals": 4
+    },
+    {
+      "country": "AUT",
+      "medals": 3
+    },
+    {
+      "country": "EST",
+      "medals": 3
+    },
+    {
+      "country": "LAT",
+      "medals": 3
+    },
+    {
+      "country": "IRL",
+      "medals": 3
+    },
+    {
+      "country": "IND",
+      "medals": 3
+    },
+    {
+      "country": "SIN",
+      "medals": 3
+    },
+    {
+      "country": "MAR",
+      "medals": 2
+    },
+    {
+      "country": "POR",
+      "medals": 2
+    },
+    {
+      "country": "DOM",
+      "medals": 2
+    },
+    {
+      "country": "ALG",
+      "medals": 2
+    },
+    {
+      "country": "TJK",
+      "medals": 2
+    },
+    {
+      "country": "IRI",
+      "medals": 2
+    },
+    {
+      "country": "COL",
+      "medals": 2
+    },
+    {
+      "country": "KGZ",
+      "medals": 2
+    },
+    {
+      "country": "TUN",
+      "medals": 1
+    },
+    {
+      "country": "ECU",
+      "medals": 1
+    },
+    {
+      "country": "SUD",
+      "medals": 1
+    },
+    {
+      "country": "PAN",
+      "medals": 1
+    },
+    {
+      "country": "RSA",
+      "medals": 1
+    },
+    {
+      "country": "CMR",
+      "medals": 1
+    },
+    {
+      "country": "MAS",
+      "medals": 1
+    },
+    {
+      "country": "MDA",
+      "medals": 1
+    },
+    {
+      "country": "MRI",
+      "medals": 1
+    },
+    {
+      "country": "TOG",
+      "medals": 1
+    },
+    {
+      "country": "EGY",
+      "medals": 1
+    },
+    {
+      "country": "ISR",
+      "medals": 1
+    },
+    {
+      "country": "VEN",
+      "medals": 1
+    },
+    {
+      "country": "AFG",
+      "medals": 1
+    },
+    {
+      "country": "CHI",
+      "medals": 1
+    },
+    {
+      "country": "VIE",
+      "medals": 1
+    }
+  ],
+  "2012": [
+    {
+      "country": "USA",
+      "medals": 250
+    },
+    {
+      "country": "RUS",
+      "medals": 130
+    },
+    {
+      "country": "CHN",
+      "medals": 128
+    },
+    {
+      "country": "GBR",
+      "medals": 126
+    },
+    {
+      "country": "AUS",
+      "medals": 114
+    },
+    {
+      "country": "GER",
+      "medals": 94
+    },
+    {
+      "country": "JPN",
+      "medals": 84
+    },
+    {
+      "country": "FRA",
+      "medals": 82
+    },
+    {
+      "country": "NED",
+      "medals": 69
+    },
+    {
+      "country": "ITA",
+      "medals": 68
+    },
+    {
+      "country": "ESP",
+      "medals": 65
+    },
+    {
+      "country": "KOR",
+      "medals": 63
+    },
+    {
+      "country": "BRA",
+      "medals": 59
+    },
+    {
+      "country": "CAN",
+      "medals": 57
+    },
+    {
+      "country": "CRO",
+      "medals": 35
+    },
+    {
+      "country": "MEX",
+      "medals": 26
+    },
+    {
+      "country": "HUN",
+      "medals": 26
+    },
+    {
+      "country": "NZL",
+      "medals": 26
+    },
+    {
+      "country": "JAM",
+      "medals": 25
+    },
+    {
+      "country": "UKR",
+      "medals": 25
+    },
+    {
+      "country": "SWE",
+      "medals": 23
+    },
+    {
+      "country": "BLR",
+      "medals": 21
+    },
+    {
+      "country": "ARG",
+      "medals": 20
+    },
+    {
+      "country": "NOR",
+      "medals": 17
+    },
+    {
+      "country": "SRB",
+      "medals": 16
+    },
+    {
+      "country": "DEN",
+      "medals": 16
+    },
+    {
+      "country": "ROU",
+      "medals": 16
+    },
+    {
+      "country": "CZE",
+      "medals": 15
+    },
+    {
+      "country": "CUB",
+      "medals": 15
+    },
+    {
+      "country": "MNE",
+      "medals": 14
+    },
+    {
+      "country": "IRI",
+      "medals": 13
+    },
+    {
+      "country": "KEN",
+      "medals": 12
+    },
+    {
+      "country": "POL",
+      "medals": 12
+    },
+    {
+      "country": "TTO",
+      "medals": 10
+    },
+    {
+      "country": "KAZ",
+      "medals": 10
+    },
+    {
+      "country": "AZE",
+      "medals": 10
+    },
+    {
+      "country": "RSA",
+      "medals": 9
+    },
+    {
+      "country": "COL",
+      "medals": 8
+    },
+    {
+      "country": "ETH",
+      "medals": 7
+    },
+    {
+      "country": "GEO",
+      "medals": 7
+    },
+    {
+      "country": "IRL",
+      "medals": 6
+    },
+    {
+      "country": "IND",
+      "medals": 6
+    },
+    {
+      "country": "PRK",
+      "medals": 6
+    },
+    {
+      "country": "LTU",
+      "medals": 5
+    },
+    {
+      "country": "SLO",
+      "medals": 5
+    },
+    {
+      "country": "FIN",
+      "medals": 5
+    },
+    {
+      "country": "MGL",
+      "medals": 5
+    },
+    {
+      "country": "SVK",
+      "medals": 5
+    },
+    {
+      "country": "",
+      "medals": 4
+    },
+    {
+      "country": "TUR",
+      "medals": 4
+    },
+    {
+      "country": "BAH",
+      "medals": 4
+    },
+    {
+      "country": "THA",
+      "medals": 4
+    },
+    {
+      "country": "SUI",
+      "medals": 4
+    },
+    {
+      "country": "KSA",
+      "medals": 4
+    },
+    {
+      "country": "EGY",
+      "medals": 4
+    },
+    {
+      "country": "SGP",
+      "medals": 4
+    },
+    {
+      "country": "TUN",
+      "medals": 3
+    },
+    {
+      "country": "UZB",
+      "medals": 3
+    },
+    {
+      "country": "LAT",
+      "medals": 3
+    },
+    {
+      "country": "BEL",
+      "medals": 3
+    },
+    {
+      "country": "GRE",
+      "medals": 3
+    },
+    {
+      "country": "INA",
+      "medals": 3
+    },
+    {
+      "country": "MAS",
+      "medals": 2
+    },
+    {
+      "country": "DOM",
+      "medals": 2
+    },
+    {
+      "country": "PUR",
+      "medals": 2
+    },
+    {
+      "country": "EST",
+      "medals": 2
+    },
+    {
+      "country": "QAT",
+      "medals": 2
+    },
+    {
+      "country": "BUL",
+      "medals": 2
+    },
+    {
+      "country": "POR",
+      "medals": 2
+    },
+    {
+      "country": "TPE",
+      "medals": 2
+    },
+    {
+      "country": "ARM",
+      "medals": 2
+    },
+    {
+      "country": "ALG",
+      "medals": 1
+    },
+    {
+      "country": "MAR",
+      "medals": 1
+    },
+    {
+      "country": "BRN",
+      "medals": 1
+    },
+    {
+      "country": "GUA",
+      "medals": 1
+    },
+    {
+      "country": "GRN",
+      "medals": 1
+    },
+    {
+      "country": "BOT",
+      "medals": 1
+    },
+    {
+      "country": "UGA",
+      "medals": 1
+    },
+    {
+      "country": "TJK",
+      "medals": 1
+    },
+    {
+      "country": "HKG",
+      "medals": 1
+    },
+    {
+      "country": "VEN",
+      "medals": 1
+    },
+    {
+      "country": "CYP",
+      "medals": 1
+    },
+    {
+      "country": "KUW",
+      "medals": 1
+    },
+    {
+      "country": "GAB",
+      "medals": 1
+    },
+    {
+      "country": "AFG",
+      "medals": 1
+    },
+    {
+      "country": "CMR",
+      "medals": 1
+    }
+  ],
+  "all_years": [
+    {
+      "country": "USA",
+      "medals": 4585
+    },
+    {
+      "country": "URS",
+      "medals": 2049
+    },
+    {
+      "country": "GBR",
+      "medals": 1720
+    },
+    {
+      "country": "FRA",
+      "medals": 1396
+    },
+    {
+      "country": "GER",
+      "medals": 1305
+    },
+    {
+      "country": "ITA",
+      "medals": 1296
+    },
+    {
+      "country": "AUS",
+      "medals": 1189
+    },
+    {
+      "country": "HUN",
+      "medals": 1079
+    },
+    {
+      "country": "SWE",
+      "medals": 1044
+    },
+    {
+      "country": "NED",
+      "medals": 851
+    },
+    {
+      "country": "GDR",
+      "medals": 825
+    },
+    {
+      "country": "CHN",
+      "medals": 807
+    },
+    {
+      "country": "JPN",
+      "medals": 788
+    },
+    {
+      "country": "RUS",
+      "medals": 768
+    },
+    {
+      "country": "CAN",
+      "medals": 649
+    },
+    {
+      "country": "ROU",
+      "medals": 640
+    },
+    {
+      "country": "NOR",
+      "medals": 554
+    },
+    {
+      "country": "KOR",
+      "medals": 529
+    },
+    {
+      "country": "POL",
+      "medals": 511
+    },
+    {
+      "country": "DEN",
+      "medals": 507
+    },
+    {
+      "country": "FRG",
+      "medals": 490
+    },
+    {
+      "country": "FIN",
+      "medals": 456
+    },
+    {
+      "country": "ESP",
+      "medals": 442
+    },
+    {
+      "country": "YUG",
+      "medals": 435
+    },
+    {
+      "country": "BRA",
+      "medals": 431
+    },
+    {
+      "country": "BEL",
+      "medals": 411
+    },
+    {
+      "country": "CUB",
+      "medals": 410
+    },
+    {
+      "country": "SUI",
+      "medals": 380
+    },
+    {
+      "country": "BUL",
+      "medals": 333
+    },
+    {
+      "country": "TCH",
+      "medals": 329
+    },
+    {
+      "country": "EUA",
+      "medals": 260
+    },
+    {
+      "country": "ARG",
+      "medals": 259
+    },
+    {
+      "country": "EUN",
+      "medals": 223
+    },
+    {
+      "country": "NZL",
+      "medals": 190
+    },
+    {
+      "country": "IND",
+      "medals": 184
+    },
+    {
+      "country": "UKR",
+      "medals": 173
+    },
+    {
+      "country": "GRE",
+      "medals": 148
+    },
+    {
+      "country": "AUT",
+      "medals": 146
+    },
+    {
+      "country": "JAM",
+      "medals": 127
+    },
+    {
+      "country": "PAK",
+      "medals": 121
+    },
+    {
+      "country": "CRO",
+      "medals": 114
+    },
+    {
+      "country": "BLR",
+      "medals": 113
+    },
+    {
+      "country": "RSA",
+      "medals": 106
+    },
+    {
+      "country": "MEX",
+      "medals": 106
+    },
+    {
+      "country": "KEN",
+      "medals": 93
+    },
+    {
+      "country": "TUR",
+      "medals": 86
+    },
+    {
+      "country": "NGR",
+      "medals": 84
+    },
+    {
+      "country": "URU",
+      "medals": 76
+    },
+    {
+      "country": "IRI",
+      "medals": 61
+    },
+    {
+      "country": "PRK",
+      "medals": 58
+    },
+    {
+      "country": "CZE",
+      "medals": 56
+    },
+    {
+      "country": "LTU",
+      "medals": 55
+    },
+    {
+      "country": "KAZ",
+      "medals": 49
+    },
+    {
+      "country": "ZZX",
+      "medals": 48
+    },
+    {
+      "country": "ETH",
+      "medals": 45
+    },
+    {
+      "country": "TPE",
+      "medals": 44
+    },
+    {
+      "country": "EST",
+      "medals": 39
+    },
+    {
+      "country": "INA",
+      "medals": 38
+    },
+    {
+      "country": "SVK",
+      "medals": 34
+    },
+    {
+      "country": "POR",
+      "medals": 33
+    },
+    {
+      "country": "CHI",
+      "medals": 33
+    },
+    {
+      "country": "SRB",
+      "medals": 31
+    },
+    {
+      "country": "IRL",
+      "medals": 30
+    },
+    {
+      "country": "ANZ",
+      "medals": 29
+    },
+    {
+      "country": "EGY",
+      "medals": 28
+    },
+    {
+      "country": "BAH",
+      "medals": 27
+    },
+    {
+      "country": "SLO",
+      "medals": 26
+    },
+    {
+      "country": "AZE",
+      "medals": 26
+    },
+    {
+      "country": "THA",
+      "medals": 25
+    },
+    {
+      "country": "GEO",
+      "medals": 25
+    },
+    {
+      "country": "MGL",
+      "medals": 24
+    },
+    {
+      "country": "CMR",
+      "medals": 23
+    },
+    {
+      "country": "ZIM",
+      "medals": 23
+    },
+    {
+      "country": "MAR",
+      "medals": 22
+    },
+    {
+      "country": "LAT",
+      "medals": 20
+    },
+    {
+      "country": "TRI",
+      "medals": 20
+    },
+    {
+      "country": "UZB",
+      "medals": 20
+    },
+    {
+      "country": "COL",
+      "medals": 19
+    },
+    {
+      "country": "RU1",
+      "medals": 17
+    },
+    {
+      "country": "ISL",
+      "medals": 17
+    },
+    {
+      "country": "PAR",
+      "medals": 17
+    },
+    {
+      "country": "GHA",
+      "medals": 16
+    },
+    {
+      "country": "PER",
+      "medals": 15
+    },
+    {
+      "country": "ALG",
+      "medals": 15
+    },
+    {
+      "country": "SCG",
+      "medals": 14
+    },
+    {
+      "country": "MNE",
+      "medals": 14
+    },
+    {
+      "country": "VEN",
+      "medals": 12
+    },
+    {
+      "country": "ARM",
+      "medals": 11
+    },
+    {
+      "country": "TUN",
+      "medals": 10
+    },
+    {
+      "country": "TTO",
+      "medals": 10
+    },
+    {
+      "country": "PHI",
+      "medals": 9
+    },
+    {
+      "country": "HAI",
+      "medals": 8
+    },
+    {
+      "country": "PUR",
+      "medals": 8
+    },
+    {
+      "country": "MAS",
+      "medals": 8
+    },
+    {
+      "country": "BOH",
+      "medals": 7
+    },
+    {
+      "country": "UGA",
+      "medals": 7
+    },
+    {
+      "country": "ISR",
+      "medals": 7
+    },
+    {
+      "country": "DOM",
+      "medals": 6
+    },
+    {
+      "country": "MDA",
+      "medals": 6
+    },
+    {
+      "country": "KSA",
+      "medals": 6
+    },
+    {
+      "country": "BWI",
+      "medals": 5
+    },
+    {
+      "country": "LIB",
+      "medals": 4
+    },
+    {
+      "country": "SIN",
+      "medals": 4
+    },
+    {
+      "country": "CRC",
+      "medals": 4
+    },
+    {
+      "country": "NAM",
+      "medals": 4
+    },
+    {
+      "country": "QAT",
+      "medals": 4
+    },
+    {
+      "country": "HKG",
+      "medals": 4
+    },
+    {
+      "country": "",
+      "medals": 4
+    },
+    {
+      "country": "SGP",
+      "medals": 4
+    },
+    {
+      "country": "PAN",
+      "medals": 3
+    },
+    {
+      "country": "SYR",
+      "medals": 3
+    },
+    {
+      "country": "IOP",
+      "medals": 3
+    },
+    {
+      "country": "KGZ",
+      "medals": 3
+    },
+    {
+      "country": "TJK",
+      "medals": 3
+    },
+    {
+      "country": "LUX",
+      "medals": 2
+    },
+    {
+      "country": "SRI",
+      "medals": 2
+    },
+    {
+      "country": "TAN",
+      "medals": 2
+    },
+    {
+      "country": "ZAM",
+      "medals": 2
+    },
+    {
+      "country": "SUR",
+      "medals": 2
+    },
+    {
+      "country": "ECU",
+      "medals": 2
+    },
+    {
+      "country": "MOZ",
+      "medals": 2
+    },
+    {
+      "country": "KUW",
+      "medals": 2
+    },
+    {
+      "country": "VIE",
+      "medals": 2
+    },
+    {
+      "country": "AFG",
+      "medals": 2
+    },
+    {
+      "country": "IRQ",
+      "medals": 1
+    },
+    {
+      "country": "NIG",
+      "medals": 1
+    },
+    {
+      "country": "BER",
+      "medals": 1
+    },
+    {
+      "country": "GUY",
+      "medals": 1
+    },
+    {
+      "country": "CIV",
+      "medals": 1
+    },
+    {
+      "country": "SEN",
+      "medals": 1
+    },
+    {
+      "country": "DJI",
+      "medals": 1
+    },
+    {
+      "country": "AHO",
+      "medals": 1
+    },
+    {
+      "country": "ISV",
+      "medals": 1
+    },
+    {
+      "country": "BDI",
+      "medals": 1
+    },
+    {
+      "country": "TGA",
+      "medals": 1
+    },
+    {
+      "country": "BAR",
+      "medals": 1
+    },
+    {
+      "country": "MKD",
+      "medals": 1
+    },
+    {
+      "country": "ERI",
+      "medals": 1
+    },
+    {
+      "country": "UAE",
+      "medals": 1
+    },
+    {
+      "country": "SUD",
+      "medals": 1
+    },
+    {
+      "country": "MRI",
+      "medals": 1
+    },
+    {
+      "country": "TOG",
+      "medals": 1
+    },
+    {
+      "country": "BRN",
+      "medals": 1
+    },
+    {
+      "country": "GUA",
+      "medals": 1
+    },
+    {
+      "country": "GRN",
+      "medals": 1
+    },
+    {
+      "country": "BOT",
+      "medals": 1
+    },
+    {
+      "country": "CYP",
+      "medals": 1
+    },
+    {
+      "country": "GAB",
+      "medals": 1
+    }
+  ]
+}
