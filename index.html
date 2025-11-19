@@ -34,6 +34,12 @@
         gap: 40px;
       }
 
+      #row-map {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        gap: 40px;
+      }
+
       #tooltip {
         position: absolute;
         pointer-events: auto;
@@ -80,9 +86,18 @@
   <body>
     <!-- Row 1: Map -->
     <div id="row-map">
-      <h2>Summer Olympic Host Cities (1856 - 2012)</h2>
-      <div id="map"></div>
-      <div id="tooltip"></div>
+      <div>
+        <h2>Summer Olympic Host Cities (1856 - 2012)</h2>
+        <div id="map"></div>
+        <div id="tooltip"></div>
+      </div>
+      <div id="chart-line">
+        <h2 id="chart-line-title">Medals Over Time</h2>
+        <select id="country-select">
+          <option value="">All Countries</option>
+        </select>
+        <svg id="line-chart" width="500" height="350"></svg>
+      </div>
     </div>
 
     <!-- Row 2: Charts -->
@@ -146,6 +161,115 @@
         d3.json("athletes.json"),
       ]).then(([world, cities, medals, events, athletes]) => {
         const countries = topojson.feature(world, world.objects.countries);
+
+        const svgLine = d3.select("#line-chart");
+        const lineMargin = { top: 30, right: 20, bottom: 40, left: 50 };
+        const lineWidth =
+          +svgLine.attr("width") - lineMargin.left - lineMargin.right;
+        const lineHeight =
+          +svgLine.attr("height") - lineMargin.top - lineMargin.bottom;
+
+        const gLine = svgLine
+          .append("g")
+          .attr("transform", `translate(${lineMargin.left},${lineMargin.top})`);
+
+        // Prepare country dropdown
+        const countrySelect = d3.select("#country-select");
+        const countryList = Object.keys(medals).sort();
+        countryList.forEach((c) =>
+          countrySelect.append("option").attr("value", c).text(c)
+        );
+
+        // Draw line chart
+        function drawLineChart(selectedCountry = "") {
+          // Prepare data: year → total medals
+          const yearTotals = {};
+
+          if (selectedCountry && medals[selectedCountry]) {
+            medals[selectedCountry].forEach((d) => {
+              yearTotals[d.year] = d.gold + d.silver + d.bronze;
+            });
+          } else {
+            // Aggregate all countries
+            for (const c in medals) {
+              medals[c].forEach((d) => {
+                yearTotals[d.year] =
+                  (yearTotals[d.year] || 0) + d.gold + d.silver + d.bronze;
+              });
+            }
+          }
+
+          const dataLine = Object.entries(yearTotals)
+            .map(([year, total]) => ({ year: +year, total }))
+            .sort((a, b) => a.year - b.year);
+
+          gLine.selectAll("*").remove();
+
+          // Scales
+          const x = d3
+            .scaleLinear()
+            .domain(d3.extent(dataLine, (d) => d.year))
+            .range([0, lineWidth]);
+
+          const y = d3
+            .scaleLinear()
+            .domain([0, d3.max(dataLine, (d) => d.total)])
+            .nice()
+            .range([lineHeight, 0]);
+
+          // Axes
+          gLine
+            .append("g")
+            .attr("transform", `translate(0,${lineHeight})`)
+            .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+
+          gLine.append("g").call(d3.axisLeft(y));
+
+          // Line
+          const line = d3
+            .line()
+            .x((d) => x(d.year))
+            .y((d) => y(d.total));
+
+          gLine
+            .append("path")
+            .datum(dataLine)
+            .attr("fill", "none")
+            .attr("stroke", "steelblue")
+            .attr("stroke-width", 2)
+            .attr("d", line);
+
+          // Points
+          gLine
+            .selectAll(".dot")
+            .data(dataLine)
+            .enter()
+            .append("circle")
+            .attr("cx", (d) => x(d.year))
+            .attr("cy", (d) => y(d.total))
+            .attr("r", 4)
+            .attr("fill", "orange")
+            .on("mouseover", (event, d) => {
+              tooltip
+                .style("opacity", 1)
+                .html(`<strong>${d.year}</strong>: ${d.total} medals`);
+            })
+            .on("mousemove", (event) => {
+              tooltip
+                .style("left", event.pageX + 14 + "px")
+                .style("top", event.pageY + 14 + "px");
+            })
+            .on("mouseout", () => tooltip.style("opacity", 0));
+        }
+
+        // Initial draw: all countries
+        drawLineChart();
+
+        // Update chart when country selected
+        countrySelect.on("change", (event) => {
+          const country = event.target.value;
+          drawLineChart(country);
+        });
 
         svgMap
           .append("g")
