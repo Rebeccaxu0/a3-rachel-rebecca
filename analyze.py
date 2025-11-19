@@ -52,168 +52,143 @@ from collections import defaultdict, Counter
 #     json.dump(output, f, indent=4)
 
 
-# def build_medals_json(csv_path, output_path):
-#     # Dictionary of years → country → medal count
-#     medals_by_year = defaultdict(lambda: defaultdict(int))
-
-#     # Dictionary for total medals across all years
-#     total_medals = defaultdict(int)
+# def build_medals_json(csv_path, outfile):
+#     # Dictionary: country → year → medal counts
+#     countries = defaultdict(lambda: defaultdict(lambda: {
+#         "year": None,
+#         "bronze": 0,
+#         "silver": 0,
+#         "gold": 0
+#     }))
 
 #     with open(csv_path, newline='', encoding="utf-8") as f:
 #         reader = csv.DictReader(f)
 
 #         for row in reader:
-#             year = row["Year"].strip()
+#             year = int(row["Year"].strip())
 #             country = row["Country"].strip()
-#             medal = row["Medal"].strip()
+#             medal = row["Medal"].strip().lower()
 
-#             # Only count rows that actually have a medal
-#             if medal not in ("Gold", "Silver", "Bronze"):
+#             # Skip invalid medals
+#             if medal not in ("gold", "silver", "bronze"):
 #                 continue
 
-#             # Update counts
-#             medals_by_year[year][country] += 1
-#             total_medals[country] += 1
+#             # Get the entry for this country and year
+#             entry = countries[country][year]
+#             entry["year"] = year
+#             entry[medal] += 1
 
-#     # Convert nested dicts → target JSON format
-#     output = {}
+#     # Convert to country → list of yearly dicts
+#     final = {}
+#     for country, years_dict in countries.items():
+#         # Sort years for each country
+#         yearly_list = [v for k, v in sorted(years_dict.items())]
+#         final[country] = yearly_list
 
-#     # Year-by-year
-#     for year, country_counts in medals_by_year.items():
-#         output[year] = [
-#             {"country": country, "medals": count}
-#             for country, count in sorted(country_counts.items(), key=lambda x: -x[1])
-#         ]
+#     # Write JSON
+#     with open(outfile, "w", encoding="utf-8") as f:
+#         json.dump(final, f, indent=4)
 
-#     # Add all-years totals
-#     output["all_years"] = [
-#         {"country": country, "medals": count}
-#         for country, count in sorted(total_medals.items(), key=lambda x: -x[1])
-#     ]
-
-#     # Save JSON
-#     with open(output_path, "w", encoding="utf-8") as out:
-#         json.dump(output, out, indent=2)
-
-#     print(f"Successfully created {output_path}")
-
+#     print(f"Created {outfile} with {len(final)} countries.")
 
 # if __name__ == "__main__":
 #     build_medals_json("summer.csv", "medals.json")
 
 
-# CSV_FILE = "summer.csv"
-# OUTPUT_JSON = "events.json"
+# def build_events_json(csv_path, outfile):
+#     # Dictionary: country → year → medal counts
+#     events = defaultdict(lambda: defaultdict(lambda: {
+#         "year": None,
+#         "country": None,
+#         "bronze": 0,
+#         "silver": 0,
+#         "gold": 0
+#     }))
 
-# def load_csv(csv_file):
-#     """
-#     Load CSV data into a list of dictionaries.
-#     """
-#     data = []
-#     with open(csv_file, newline='', encoding='utf-8') as f:
+#     with open(csv_path, newline='', encoding="utf-8") as f:
 #         reader = csv.DictReader(f)
+
 #         for row in reader:
-#             if row['Medal']:  # Only include rows with medals
-#                 data.append({
-#                     "Year": int(row['Year']),
-#                     "Country": row['Country'],
-#                     "Event": row['Discipline']
-#                 })
-#     return data
+#             year = int(row["Year"].strip())
+#             country = row["Country"].strip()
+#             sport = row["Discipline"].strip()
+#             medal = row["Medal"].strip().lower()
 
-# def aggregate_medals(data):
-#     """
-#     Aggregate number of medals per event, per year, per country.
-#     Returns a dict like:
-#     {
-#         "100m Men": [
-#             {"year": 2020, "country": "USA", "medals": 2},
-#             {"year": 2016, "country": "GBR", "medals": 1},
-#         ],
-#         ...
-#     }
-#     """
-#     agg = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
-#     for row in data:
-#         event = row['Event']
-#         year = row['Year']
-#         country = row['Country']
-#         agg[event][year][country] += 1
+#             # Skip invalid medals
+#             if medal not in ("gold", "silver", "bronze"):
+#                 continue
 
-#     result = {}
-#     for event, years in agg.items():
-#         result[event] = []
-#         for year, countries in years.items():
-#             for country, medals in countries.items():
-#                 result[event].append({
-#                     "year": year,
-#                     "country": country,
-#                     "medals": medals
-#                 })
-#     return result
+#             key = (year, country) 
+#             entry = events[sport][key]
+#             entry["year"] = year
+#             entry["country"] = country
+#             entry[medal] += 1
 
-# def save_json(data, output_file):
-#     with open(output_file, "w", encoding="utf-8") as f:
-#         json.dump(data, f, indent=4)
+#     # Convert inner defaultdicts to lists
+#     final = {}
+#     for event, entries in events.items():
+#         final[event] = list(entries.values())
+
+#     # Write JSON
+#     with open(outfile, "w", encoding="utf-8") as f:
+#         json.dump(final, f, indent=4)
 
 # if __name__ == "__main__":
-#     data = load_csv(CSV_FILE)
-#     aggregated_data = aggregate_medals(data)
-#     save_json(aggregated_data, OUTPUT_JSON)
+#     build_events_json("summer.csv", "events.json")
 
 
-INPUT_CSV = "summer.csv"
-OUTPUT_JSON = "athletes.json"
+# INPUT_CSV = "summer.csv"
+# OUTPUT_JSON = "athletes.json"
 
-def build_athlete_medal_json(csv_file=INPUT_CSV, outfile=OUTPUT_JSON):
-    # Structure:
-    # athletes[athlete][(sport, year, country)] = {sport, year, country, bronze, silver, gold}
-    athletes = defaultdict(lambda: defaultdict(lambda: {
-        "sport": None,
-        "year": None,
-        "country": None,
-        "bronze": 0,
-        "silver": 0,
-        "gold": 0
-    }))
+# def build_athlete_medal_json(csv_file=INPUT_CSV, outfile=OUTPUT_JSON):
+#     # Structure:
+#     # athletes[athlete][(sport, year, country)] = {sport, year, country, bronze, silver, gold}
+#     athletes = defaultdict(lambda: defaultdict(lambda: {
+#         "sport": None,
+#         "year": None,
+#         "country": None,
+#         "bronze": 0,
+#         "silver": 0,
+#         "gold": 0
+#     }))
 
-    with open(csv_file, newline='', encoding="utf-8") as f:
-        reader = csv.DictReader(f)
+#     with open(csv_file, newline='', encoding="utf-8") as f:
+#         reader = csv.DictReader(f)
 
-        for row in reader:
-            athlete = row["Athlete"].strip()
-            sport = row["Discipline"].strip()
-            year = int(row["Year"])
-            country = row["Country"].strip()
-            medal = row["Medal"].strip().lower()
+#         for row in reader:
+#             athlete = row["Athlete"].strip()
+#             sport = row["Discipline"].strip()
+#             year = int(row["Year"])
+#             country = row["Country"].strip()
+#             medal = row["Medal"].strip().lower()
 
-            # Skip if no medal
-            if medal not in ("gold", "silver", "bronze"):
-                continue
+#             # Skip if no medal
+#             if medal not in ("gold", "silver", "bronze"):
+#                 continue
 
-            key = (sport, year, country)  # Unique per athlete
+#             key = (sport, year, country)  # Unique per athlete
 
-            entry = athletes[athlete][key]
+#             entry = athletes[athlete][key]
 
-            # Fill descriptive fields once
-            entry["sport"] = sport
-            entry["year"] = year
-            entry["country"] = country
+#             # Fill descriptive fields once
+#             entry["sport"] = sport
+#             entry["year"] = year
+#             entry["country"] = country
 
-            # Increment medal
-            entry[medal] += 1
+#             # Increment medal
+#             entry[medal] += 1
 
-    # Convert inner defaultdicts to lists
-    final = {}
-    for athlete, entries in athletes.items():
-        final[athlete] = list(entries.values())
+#     # Convert inner defaultdicts to lists
+#     final = {}
+#     for athlete, entries in athletes.items():
+#         final[athlete] = list(entries.values())
 
-    # Write JSON
-    with open(outfile, "w", encoding="utf-8") as f:
-        json.dump(final, f, indent=4)
+#     # Write JSON
+#     with open(outfile, "w", encoding="utf-8") as f:
+#         json.dump(final, f, indent=4)
 
-    print(f"Created {outfile} with {len(final)} athletes.")
+#     print(f"Created {outfile} with {len(final)} athletes.")
 
 
-if __name__ == "__main__":
-    build_athlete_medal_json()
+# if __name__ == "__main__":
+#     build_athlete_medal_json()
