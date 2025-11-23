@@ -2,45 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Olympics Map + Medal Graphs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olympic Medal Visualization</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
     <style>
       body {
-        font-family: sans-serif;
-        margin: 20px;
-        text-align: center;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
       }
-
-      #row-map {
-        margin-bottom: 10px;
-      }
-
-      h2 {
-        margin: 10px;
-      }
-
-      #map svg {
-        width: 600px;
+      .chart-container {
+        width: 500px;
         height: 350px;
-        display: block;
-        margin: 0 auto;
+        overflow-y: auto;
+        border: 1px solid #ccc;
       }
-
-      /* Row 2: Charts */
-      #row-charts {
-        display: flex;
-        justify-content: center; /* Center horizontally */
-        gap: 40px;
-      }
-
-      #row-map {
-        display: flex;
-        justify-content: center; /* Center horizontally */
-        gap: 40px;
-      }
-
-      #tooltip {
+      #map-tooltip {
         position: absolute;
         pointer-events: auto;
         background: white;
@@ -50,82 +30,140 @@
         opacity: 0;
         transition: opacity 0.2s;
       }
-
-      .bar {
-        fill: steelblue;
+      #line-tooltip {
+        position: absolute;
+        pointer-events: auto;
+        background: white;
+        padding: 6px 10px;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity 0.2s;
       }
-
-      .bar:hover {
-        fill: orange;
+      #chart-tooltip {
+        position: absolute;
+        pointer-events: auto;
+        background: white;
+        padding: 6px 10px;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity 0.2s;
       }
-
-      /* Scrollable vertical chart */
-      .chart-container {
-        width: 500px;
-        height: 350px;
+      #left-panel {
+        width: 60%;
+        border-right: 1px solid #ccc;
+        padding: 20px;
+        box-sizing: border-box;
         overflow-y: auto;
-        border: 1px solid #ccc;
       }
-
+      #right-panel {
+        flex-grow: 1;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+      .section h3 {
+        margin-bottom: 10px;
+      }
+      .toggle-group button {
+        margin-right: 10px;
+      }
+      #chart-container {
+        flex-grow: 1;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+      }
+      #chart-line {
+        display: none;
+      }
+      .hidden {
+        display: none;
+      }
       svg {
         display: block;
         margin: 0 auto;
       }
-
       .year {
         text-decoration: underline;
         cursor: pointer;
         color: blue;
       }
-
-      #row-charts h2 {
-        font-size: 20px;
-      }
     </style>
   </head>
   <body>
-    <!-- Row 1: Map -->
-    <div id="row-map">
-      <div>
-        <h2>Summer Olympic Host Cities (1896 - 2012)</h2>
-        <div id="map"></div>
-        <div id="tooltip"></div>
+    <div id="left-panel">
+      <div class="section">
+        <h3>View Mode</h3>
+        <div class="toggle-group">
+          <button id="line-view-btn">Line Graph</button>
+          <button id="map-view-btn">Map View</button>
+        </div>
       </div>
-      <div id="chart-line">
-        <h2 id="chart-line-title">Medals Over Time</h2>
+
+      <div class="section">
+        <h3>Filter Options</h3>
+        <label>Country:</label>
         <select id="country-select">
-          <option value="">All Countries</option>
+          <option value="all">All</option>
         </select>
-        <svg id="line-chart" width="500" height="350"></svg>
+
+        <label>Sport:</label>
+        <select id="sport-select">
+          <option value="all">All</option>
+        </select>
+
+        <div id="row-map">
+          <div id="chart-map">
+            <h2>Summer Olympic Host Cities (1896 - 2012)</h2>
+            <div id="map"></div>
+            <div id="map-tooltip"></div>
+          </div>
+          <div id="chart-line">
+            <h2 id="chart-line-title">Medals Over Time</h2>
+            <svg id="line-chart" width="700" height="400"></svg>
+            <div id="line-tooltip"></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Row 2: Charts -->
-    <div id="row-charts">
+    <div id="right-panel">
+      <div class="section">
+        <h3>Medal Count</h3>
+        <div class="toggle-group">
+          <button id="by-country-btn">By Country</button>
+          <button id="by-discipline-btn">By Discipline</button>
+          <button id="by-athlete-btn">By Athlete</button>
+        </div>
+      </div>
       <div id="chart">
-        <h2 id="chart-title">Medals By Country - Total</h2>
+        <h2 id="chart-title">Total</h2>
         <div class="chart-container">
           <svg id="bar-chart" width="500"></svg>
         </div>
-      </div>
-
-      <div id="chart-events">
-        <h2 id="chart-events-title">Medals By Sport - Total</h2>
-        <div class="chart-container">
-          <svg id="event-chart" width="500"></svg>
-        </div>
-      </div>
-
-      <div id="chart-athletes">
-        <h2 id="chart-athletes-title">Medals By Athlete - Total</h2>
-        <div class="chart-container">
-          <svg id="athlete-chart" width="500"></svg>
-        </div>
+        <div id="chart-tooltip"></div>
       </div>
     </div>
-
     <script>
-      const mapWidth = 600,
+      const mapBlock = document.getElementById("chart-map");
+      const lineBlock = document.getElementById("chart-line");
+
+      document.getElementById("line-view-btn").addEventListener("click", () => {
+        mapBlock.style.display = "none";
+        lineBlock.style.display = "block";
+      });
+
+      document.getElementById("map-view-btn").addEventListener("click", () => {
+        lineBlock.style.display = "none";
+        mapBlock.style.display = "block";
+      });
+
+      const mapWidth = 700,
         mapHeight = 400;
       const chartWidth = 500;
       const margin = { top: 30, right: 20, bottom: 30, left: 50 };
@@ -135,10 +173,12 @@
         .append("svg")
         .attr("width", mapWidth)
         .attr("height", mapHeight);
-      const tooltip = d3.select("#tooltip");
+      const mapTooltip = d3.select("#map-tooltip");
       const svgChart = d3.select("#bar-chart");
       const svgEventChart = d3.select("#event-chart");
       const svgAthleteChart = d3.select("#athlete-chart");
+      const lineTooltip = d3.select("#line-tooltip");
+      const barTooltip = d3.select("#chart-tooltip");
 
       const projection = d3
         .geoMercator()
@@ -156,13 +196,15 @@
           "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
         ),
         d3.json("centroids.json"),
-        d3.json("medals.json"),
+        d3.json("years.json"),
+        d3.json("countries.json"),
         d3.json("events.json"),
         d3.json("athletes.json"),
-      ]).then(([world, cities, medals, events, athletes]) => {
-        const countries = topojson.feature(world, world.objects.countries);
+      ]).then(([world, cities, years, countries, events, athletes]) => {
+        const mapCountries = topojson.feature(world, world.objects.countries);
 
         const svgLine = d3.select("#line-chart");
+        const svgChart = d3.select("#bar-chart");
         const lineMargin = { top: 30, right: 20, bottom: 40, left: 50 };
         const lineWidth =
           +svgLine.attr("width") - lineMargin.left - lineMargin.right;
@@ -173,31 +215,42 @@
           .append("g")
           .attr("transform", `translate(${lineMargin.left},${lineMargin.top})`);
 
-        // Prepare country dropdown
         const countrySelect = d3.select("#country-select");
-        const countryList = Object.keys(medals).sort();
+        const countryList = Object.keys(countries).sort();
         countryList.forEach((c) =>
           countrySelect.append("option").attr("value", c).text(c)
         );
 
-        // Draw line chart
-        function drawLineChart(selectedCountry = "") {
-          // Prepare data: year → total medals
-          const yearTotals = {};
+        const sportSelect = d3.select("#sport-select");
+        const sportList = Object.keys(events).sort();
+        sportList.forEach((c) =>
+          sportSelect.append("option").attr("value", c).text(c)
+        );
 
-          if (selectedCountry && medals[selectedCountry]) {
-            medals[selectedCountry].forEach((d) => {
-              yearTotals[d.year] = d.gold + d.silver + d.bronze;
-            });
-          } else {
-            // Aggregate all countries
-            for (const c in medals) {
-              medals[c].forEach((d) => {
-                yearTotals[d.year] =
-                  (yearTotals[d.year] || 0) + d.gold + d.silver + d.bronze;
-              });
+        function createYearsData(data, country, sport) {
+          const result = {};
+
+          for (const year in data) {
+            const entries = data[year];
+            medal_ct = 0;
+            for (const item of entries) {
+              const matchCountry = !country || item.country == country;
+              const matchSport = !sport || item.sport == sport;
+
+              if (matchCountry && matchSport) {
+                medal_ct += item.bronze + item.silver + item.gold;
+              }
+            }
+
+            if (medal_ct != 0) {
+              result[year] = medal_ct;
             }
           }
+          return result;
+        }
+
+        function drawLineChart() {
+          yearTotals = createYearsData(years, selectedCountry, selectedSport);
 
           const dataLine = Object.entries(yearTotals)
             .map(([year, total]) => ({ year: +year, total }))
@@ -250,16 +303,16 @@
             .attr("r", 4)
             .attr("fill", "orange")
             .on("mouseover", (event, d) => {
-              tooltip
+              lineTooltip
                 .style("opacity", 1)
                 .html(`<strong>${d.year}</strong>: ${d.total} medals`);
             })
             .on("mousemove", (event) => {
-              tooltip
+              lineTooltip
                 .style("left", event.pageX + 14 + "px")
                 .style("top", event.pageY + 14 + "px");
             })
-            .on("mouseout", () => tooltip.style("opacity", 0));
+            .on("mouseout", () => lineTooltip.style("opacity", 0));
         }
 
         // Initial draw: all countries
@@ -267,14 +320,31 @@
 
         // Update chart when country selected
         countrySelect.on("change", (event) => {
-          const country = event.target.value;
-          drawLineChart(country);
+          country = event.target.value;
+          if (country == "all") {
+            selectedCountry = null;
+          } else {
+            selectedCountry = event.target.value;
+          }
+          drawLineChart();
+          drawBarChart();
+        });
+
+        // Update chart when sport selected
+        sportSelect.on("change", (event) => {
+          sport = event.target.value;
+          if (sport == "all") {
+            selectedSport = null;
+          } else {
+            selectedSport = event.target.value;
+          }
+          drawLineChart();
         });
 
         svgMap
           .append("g")
           .selectAll("path")
-          .data(countries.features)
+          .data(mapCountries.features)
           .enter()
           .append("path")
           .attr("fill", "#ddd")
@@ -293,7 +363,7 @@
           .attr("r", 6)
           .attr("fill", "steelblue")
           .on("mouseover", (event, d) => {
-            tooltip
+            mapTooltip
               .style("opacity", 1)
               .html(
                 `<strong>${d.city}</strong><br>Years: ${d.years
@@ -304,41 +374,18 @@
                   .join(", ")}`
               );
 
-            tooltip.selectAll(".year").on("click", (event) => {
+            mapTooltip.selectAll(".year").on("click", (event) => {
               event.stopPropagation();
               selectedYear = event.target.getAttribute("data-year");
-              drawBarChart(
-                createCountryData(medals, selectedYear),
-                `Medals By Country — ${selectedYear}`
-              );
-              //   if (selectedCountry) {
-              //     drawEventChart(
-              //       createEventsData(events, selectedYear, selectedCountry),
-              //       `Medals By Sport — ${selectedYear} and ${selectedCountry}`
-              //     );
-              //   } else {
-              //     drawEventChart(
-              //       createEventsData(events, selectedYear),
-              //       `Medals By Sport — ${selectedYear}`
-              //     );
-              //   }
             });
           })
           .on("mousemove", (event) => {
-            tooltip
+            mapTooltip
               .style("left", event.pageX + 14 + "px")
               .style("top", event.pageY + 14 + "px");
           });
 
-        // Default charts
-        drawBarChart(createCountryData(medals), "Medals By Country - Total");
-        drawEventChart(createEventsData(events), "Medals By Sport - Total");
-        drawAthleteChart(
-          createAthleteData(athletes),
-          "Medals By Athlete - Total"
-        );
-
-        function createCountryData(data, year) {
+        function createCountryData(data, year, sport) {
           const result = [];
 
           for (const country in data) {
@@ -348,8 +395,9 @@
             gold_count = 0;
             for (const item of entries) {
               const matchYear = !year || item.year == year;
+              const matchSport = !sport || item.sport == sport;
 
-              if (matchYear) {
+              if (matchYear && matchSport) {
                 bronze_count += item.bronze;
                 gold_count += item.gold;
                 silver_count += item.silver;
@@ -369,74 +417,15 @@
           return result;
         }
 
-        function createEventsData(data, year, country) {
-          const result = [];
-
-          for (const sport in data) {
-            const entries = data[sport];
-            bronze_count = 0;
-            silver_count = 0;
-            gold_count = 0;
-            for (const item of entries) {
-              const matchYear = !year || item.year == year;
-              const matchCountry = !country || item.country == country;
-
-              if (matchYear && matchCountry) {
-                bronze_count += item.bronze;
-                gold_count += item.gold;
-                silver_count += item.silver;
-              }
-            }
-
-            medals_count = bronze_count + gold_count + silver_count;
-            if (medals_count != 0) {
-              result.push({
-                sport: sport,
-                bronze: bronze_count,
-                silver: silver_count,
-                gold: gold_count,
-              });
-            }
+        function drawBarChart() {
+          const parts = [selectedYear, selectedCountry, selectedSport];
+          const filtered = parts.filter((p) => p != null && p !== "");
+          titleText = filtered.join(" - ");
+          if (titleText == '') {
+            titleText = "Total";
           }
-          return result;
-        }
-
-        function createAthleteData(data, year, country, sport) {
-          const result = [];
-
-          for (const athlete in data) {
-            const entries = data[athlete];
-            bronze_count = 0;
-            silver_count = 0;
-            gold_count = 0;
-            for (const item of entries) {
-              const matchYear = !year || item.year == year;
-              const matchCountry = !country || item.country == country;
-              const matchSport = !sport || item.sport == sport;
-
-              if (matchYear && matchCountry && matchSport) {
-                bronze_count += item.bronze;
-                gold_count += item.gold;
-                silver_count += item.silver;
-              }
-            }
-
-            medals_count = bronze_count + gold_count + silver_count;
-            if (medals_count != 0) {
-              result.push({
-                athlete: athlete,
-                bronze: bronze_count,
-                silver: silver_count,
-                gold: gold_count,
-              });
-            }
-          }
-          return result;
-        }
-
-        function drawBarChart(data, titleText) {
-          if (!data) return;
           d3.select("#chart-title").text(titleText);
+          data = createCountryData(countries, selectedYear, selectedSport);
 
           // Compute total medals and sort
           data.forEach((d) => {
@@ -494,19 +483,6 @@
             .append("g")
             .attr("class", "athlete-bar")
             .attr("transform", (d) => `translate(0, ${y(d.country)})`)
-            .on("click", (event, d) => {
-              selectedCountry = d.country;
-              title = '';
-              if (selectedYear) {
-                title = `Medals By Sport — ${selectedYear} and ${selectedCountry}`
-              } else {
-                title = `Medals By Sport — ${selectedCountry}`
-              }
-              drawEventChart(
-                createEventsData(events, selectedYear, selectedCountry),
-                title
-              );
-            })
             .each(function (d) {
               let currentX = x(0); // start at 0
               const medalOrder = ["bronze", "silver", "gold"];
@@ -522,7 +498,7 @@
                     .attr("height", y.bandwidth())
                     .attr("fill", medalColors[medal])
                     .on("mouseover", (event) => {
-                      tooltip.style("opacity", 1).html(`
+                      barTooltip.style("opacity", 1).html(`
                   <strong>${d.country}</strong><br>
                   Gold: ${d.gold}<br>
                   Silver: ${d.silver}<br>
@@ -531,11 +507,11 @@
                 `);
                     })
                     .on("mousemove", (event) => {
-                      tooltip
+                      barTooltip
                         .style("left", event.pageX + 14 + "px")
                         .style("top", event.pageY + 14 + "px");
                     })
-                    .on("mouseout", () => tooltip.style("opacity", 0));
+                    .on("mouseout", () => barTooltip.style("opacity", 0));
 
                   currentX += rectWidth; // increment X for next medal
                 }
@@ -543,220 +519,7 @@
             });
         }
 
-        function drawEventChart(data, titleText) {
-          if (!data) return;
-          d3.select("#chart-events-title").text(titleText);
-
-          // Compute total medals and sort
-          data.forEach((d) => {
-            d.total = d.bronze + d.silver + d.gold;
-          });
-          data = data.sort((a, b) => d3.descending(a.total, b.total));
-
-          const barHeight = 15;
-          const visibleHeight = 500;
-          const neededHeight =
-            data.length * barHeight + margin.top + margin.bottom;
-          const svgHeight = Math.max(neededHeight, visibleHeight);
-
-          svgEventChart.attr("height", svgHeight);
-          svgEventChart.selectAll("*").remove();
-
-          // X scale based on total medals
-          const x = d3
-            .scaleLinear()
-            .domain([0, d3.max(data, (d) => d.total)])
-            .nice()
-            .range([100, chartWidth - margin.right]);
-
-          // Y scale is athletes
-          const y = d3
-            .scaleBand()
-            .domain(data.map((d) => d.sport))
-            .range([margin.top, neededHeight - margin.bottom])
-            .padding(0.2);
-
-          // Axes
-          svgEventChart
-            .append("g")
-            .attr("transform", `translate(0, ${neededHeight - margin.bottom})`)
-            .call(d3.axisBottom(x));
-
-          svgEventChart
-            .append("g")
-            .attr("transform", `translate(100, 0)`)
-            .call(d3.axisLeft(y));
-
-          // Colors for each medal type
-          const medalColors = {
-            bronze: "#9F7A34",
-            silver: "#c0c0c0",
-            gold: "#D4AF37",
-          };
-
-          // Stacked bar drawing
-          svgEventChart
-            .append("g")
-            .selectAll("g.athlete-bar")
-            .data(data)
-            .enter()
-            .append("g")
-            .attr("class", "athlete-bar")
-            .attr("transform", (d) => `translate(0, ${y(d.sport)})`)
-            .on("click", (event, d) => {
-              selectedSport = d.sport;
-              title = '';
-              if (selectedYear && selectedCountry) {
-                title = `Medals By Athlete — ${selectedYear}, ${selectedCountry}, and ${selectedSport}`;
-              } else if (selectedYear) {
-                title = `Medals By Athlete — ${selectedYear} and ${selectedSport}`;
-              } else if (selectedCountry) {
-                title = `Medals By Athlete — ${selectedCountry} and ${selectedSport}`;
-              } else {
-                title  = `Medals By Athlete — ${selectedSport}`;
-              }
-              drawAthleteChart(
-                createAthleteData(
-                  athletes,
-                  selectedYear,
-                  selectedCountry,
-                  selectedSport
-                ),
-                title
-              );
-            })
-
-            .each(function (d) {
-              let currentX = x(0); // start at 0
-              const medalOrder = ["bronze", "silver", "gold"];
-
-              medalOrder.forEach((medal) => {
-                const value = d[medal];
-                if (value > 0) {
-                  const rectWidth = x(value) - x(0);
-                  d3.select(this)
-                    .append("rect")
-                    .attr("x", currentX)
-                    .attr("width", rectWidth)
-                    .attr("height", y.bandwidth())
-                    .attr("fill", medalColors[medal])
-                    .on("mouseover", (event) => {
-                      tooltip.style("opacity", 1).html(`
-                  <strong>${d.sport}</strong><br>
-                  Gold: ${d.gold}<br>
-                  Silver: ${d.silver}<br>
-                  Bronze: ${d.bronze}<br>
-                  Total: ${d.total}
-                `);
-                    })
-                    .on("mousemove", (event) => {
-                      tooltip
-                        .style("left", event.pageX + 14 + "px")
-                        .style("top", event.pageY + 14 + "px");
-                    })
-                    .on("mouseout", () => tooltip.style("opacity", 0));
-
-                  currentX += rectWidth; // increment X for next medal
-                }
-              });
-            });
-        }
-
-        function drawAthleteChart(data, titleText) {
-          if (!data) return;
-          d3.select("#chart-athletes-title").text(titleText);
-
-          // Compute total medals and sort
-          data.forEach((d) => {
-            d.total = d.bronze + d.silver + d.gold;
-          });
-          data = data.sort((a, b) => d3.descending(a.total, b.total));
-
-          const barHeight = 15;
-          const visibleHeight = 500;
-          const neededHeight =
-            data.length * barHeight + margin.top + margin.bottom;
-          const svgHeight = Math.max(neededHeight, visibleHeight);
-
-          svgAthleteChart.attr("height", svgHeight);
-          svgAthleteChart.selectAll("*").remove();
-
-          // X scale based on total medals
-          const x = d3
-            .scaleLinear()
-            .domain([0, d3.max(data, (d) => d.total)])
-            .nice()
-            .range([150, chartWidth - margin.right]);
-
-          // Y scale is athletes
-          const y = d3
-            .scaleBand()
-            .domain(data.map((d) => d.athlete))
-            .range([margin.top, neededHeight - margin.bottom])
-            .padding(0.2);
-
-          // Axes
-          svgAthleteChart
-            .append("g")
-            .attr("transform", `translate(0, ${neededHeight - margin.bottom})`)
-            .call(d3.axisBottom(x));
-
-          svgAthleteChart
-            .append("g")
-            .attr("transform", `translate(150, 0)`)
-            .call(d3.axisLeft(y));
-
-          // Colors for each medal type
-          const medalColors = {
-            bronze: "#9F7A34",
-            silver: "#c0c0c0",
-            gold: "#D4AF37",
-          };
-
-          // Stacked bar drawing
-          svgAthleteChart
-            .append("g")
-            .selectAll("g.athlete-bar")
-            .data(data)
-            .enter()
-            .append("g")
-            .attr("class", "athlete-bar")
-            .attr("transform", (d) => `translate(0, ${y(d.athlete)})`)
-            .each(function (d) {
-              let currentX = x(0); // start at 0
-              const medalOrder = ["bronze", "silver", "gold"];
-
-              medalOrder.forEach((medal) => {
-                const value = d[medal];
-                if (value > 0) {
-                  const rectWidth = x(value) - x(0);
-                  d3.select(this)
-                    .append("rect")
-                    .attr("x", currentX)
-                    .attr("width", rectWidth)
-                    .attr("height", y.bandwidth())
-                    .attr("fill", medalColors[medal])
-                    .on("mouseover", (event) => {
-                      tooltip.style("opacity", 1).html(`
-                  <strong>${d.athlete}</strong><br>
-                  Gold: ${d.gold}<br>
-                  Silver: ${d.silver}<br>
-                  Bronze: ${d.bronze}<br>
-                  Total: ${d.total}
-                `);
-                    })
-                    .on("mousemove", (event) => {
-                      tooltip
-                        .style("left", event.pageX + 14 + "px")
-                        .style("top", event.pageY + 14 + "px");
-                    })
-                    .on("mouseout", () => tooltip.style("opacity", 0));
-
-                  currentX += rectWidth; // increment X for next medal
-                }
-              });
-            });
-        }
+        drawBarChart(createCountryData(countries), "Total");
       });
     </script>
   </body>
