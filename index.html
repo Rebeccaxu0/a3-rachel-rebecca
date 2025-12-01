@@ -15,8 +15,7 @@
         overflow: hidden;
       }
       .chart-container {
-        width: 500px;
-        height: 350px;
+        height: 400px;
         overflow-y: auto;
         border: 1px solid #ccc;
       }
@@ -51,7 +50,7 @@
         transition: opacity 0.2s;
       }
       #left-panel {
-        width: 60%;
+        width: 55%;
         border-right: 1px solid #ccc;
         padding: 20px;
         box-sizing: border-box;
@@ -73,12 +72,10 @@
       .toggle-group button {
         margin-right: 10px;
       }
-      #chart-container {
-        flex-grow: 1;
-        border: 1px solid #ccc;
-        margin-top: 10px;
-      }
       #chart-line {
+        display: block;
+      }
+      #chart-map {
         display: none;
       }
       .hidden {
@@ -105,29 +102,33 @@
         </div>
       </div>
 
-      <div class="section">
-        <h3>Filter Options</h3>
-        <label>Country:</label>
-        <select id="country-select">
-          <option value="all">All</option>
-        </select>
+      <div id="row-map">
+        <div id="chart-map">
+          <h2 style="margin-bottom: 4px;">Summer Olympic Host Cities (1896 - 2012)</h2>
+          <i
+            >Click a year on a line to update bar charts.</i
+          ><br /><br />
+          <div id="map"></div>
+          <div id="map-tooltip"></div>
+        </div>
+        <div id="chart-line">
+          <h2 style="margin-bottom: 4px">Medals Over Time</h2>
+          <i
+            >Select a country and/or sport to show more lines. Click a year on a
+            line to update bar charts.</i
+          >
+          <br /><br />
+          <label>Country:</label>
+          <select id="country-select">
+            <option value="none">None</option>
+          </select>
 
-        <label>Sport:</label>
-        <select id="sport-select">
-          <option value="all">All</option>
-        </select>
-
-        <div id="row-map">
-          <div id="chart-map">
-            <h2>Summer Olympic Host Cities (1896 - 2012)</h2>
-            <div id="map"></div>
-            <div id="map-tooltip"></div>
-          </div>
-          <div id="chart-line">
-            <h2 id="chart-line-title">Medals Over Time</h2>
-            <svg id="line-chart" width="700" height="400"></svg>
-            <div id="line-tooltip"></div>
-          </div>
+          <label>&nbsp;Sport:</label>
+          <select id="sport-select">
+            <option value="none">None</option>
+          </select>
+          <svg id="line-chart" width="700" height="400"></svg>
+          <div id="line-tooltip"></div>
         </div>
       </div>
     </div>
@@ -137,14 +138,14 @@
         <h3>Medal Count</h3>
         <div class="toggle-group">
           <button id="by-country-btn">By Country</button>
-          <button id="by-discipline-btn">By Discipline</button>
+          <button id="by-sport-btn">By Sport</button>
           <button id="by-athlete-btn">By Athlete</button>
         </div>
       </div>
       <div id="chart">
-        <h2 id="chart-title">Total</h2>
+        <h2 id="chart-title">By Country - Total</h2>
         <div class="chart-container">
-          <svg id="bar-chart" width="500"></svg>
+          <svg id="bar-chart" width="600"></svg>
         </div>
         <div id="chart-tooltip"></div>
       </div>
@@ -165,7 +166,7 @@
 
       const mapWidth = 700,
         mapHeight = 400;
-      const chartWidth = 500;
+      const chartWidth = 600;
       const margin = { top: 30, right: 20, bottom: 30, left: 50 };
 
       const svgMap = d3
@@ -190,6 +191,9 @@
       let selectedYear = null;
       let selectedCountry = null;
       let selectedSport = null;
+      let selectedBar = "country";
+      let sBarCountry = null;
+      let sBarSport = null;
 
       Promise.all([
         d3.json(
@@ -205,7 +209,7 @@
 
         const svgLine = d3.select("#line-chart");
         const svgChart = d3.select("#bar-chart");
-        const lineMargin = { top: 30, right: 20, bottom: 40, left: 50 };
+        const lineMargin = { top: 30, right: 200, bottom: 40, left: 50 };
         const lineWidth =
           +svgLine.attr("width") - lineMargin.left - lineMargin.right;
         const lineHeight =
@@ -226,6 +230,27 @@
         sportList.forEach((c) =>
           sportSelect.append("option").attr("value", c).text(c)
         );
+
+        document
+          .getElementById("by-sport-btn")
+          .addEventListener("click", () => {
+            selectedBar = "sport";
+            drawBarChart(selectedBar);
+          });
+
+        document
+          .getElementById("by-country-btn")
+          .addEventListener("click", () => {
+            selectedBar = "country";
+            drawBarChart(selectedBar);
+          });
+
+        document
+          .getElementById("by-athlete-btn")
+          .addEventListener("click", () => {
+            selectedBar = "athlete";
+            drawBarChart(selectedBar);
+          });
 
         function createYearsData(data, country, sport) {
           const result = {};
@@ -249,24 +274,70 @@
           return result;
         }
 
+        const hiddenSeries = new Set();
+
         function drawLineChart() {
-          yearTotals = createYearsData(years, selectedCountry, selectedSport);
-
-          const dataLine = Object.entries(yearTotals)
-            .map(([year, total]) => ({ year: +year, total }))
-            .sort((a, b) => a.year - b.year);
-
           gLine.selectAll("*").remove();
+          const series = [
+            {
+              name: "Overall",
+              color: "forestgreen",
+              data: Object.entries(createYearsData(years, null, null))
+                .map(([year, total]) => ({ year: +year, total }))
+                .sort((a, b) => a.year - b.year),
+            },
+          ];
 
-          // Scales
+          if (selectedCountry) {
+            series.push({
+              name: selectedCountry,
+              color: "tomato",
+              data: Object.entries(
+                createYearsData(years, selectedCountry, null)
+              )
+                .map(([year, total]) => ({ year: +year, total }))
+                .sort((a, b) => a.year - b.year),
+            });
+          }
+
+          if (selectedSport) {
+            series.push({
+              name: selectedSport,
+              color: "steelblue",
+              data: Object.entries(createYearsData(years, null, selectedSport))
+                .map(([year, total]) => ({ year: +year, total }))
+                .sort((a, b) => a.year - b.year),
+            });
+          }
+
+          if (selectedSport && selectedCountry) {
+            series.push({
+              name: `${selectedCountry} and ${selectedSport}`,
+              color: "mediumorchid",
+              data: Object.entries(
+                createYearsData(years, selectedCountry, selectedSport)
+              )
+                .map(([year, total]) => ({ year: +year, total }))
+                .sort((a, b) => a.year - b.year),
+            });
+          }
+
+          const visibleSeries = series.filter((s) => !hiddenSeries.has(s.name));
+
           const x = d3
             .scaleLinear()
-            .domain(d3.extent(dataLine, (d) => d.year))
+            .domain([
+              d3.min(visibleSeries, (s) => d3.min(s.data, (d) => d.year)),
+              d3.max(visibleSeries, (s) => d3.max(s.data, (d) => d.year)),
+            ])
             .range([0, lineWidth]);
 
           const y = d3
             .scaleLinear()
-            .domain([0, d3.max(dataLine, (d) => d.total)])
+            .domain([
+              0,
+              d3.max(visibleSeries, (s) => d3.max(s.data, (d) => d.total)),
+            ])
             .nice()
             .range([lineHeight, 0]);
 
@@ -278,41 +349,119 @@
 
           gLine.append("g").call(d3.axisLeft(y));
 
-          // Line
+          // Line generator
           const line = d3
             .line()
             .x((d) => x(d.year))
             .y((d) => y(d.total));
 
-          gLine
-            .append("path")
-            .datum(dataLine)
-            .attr("fill", "none")
-            .attr("stroke", "steelblue")
-            .attr("stroke-width", 2)
-            .attr("d", line);
+          // Draw each line
+          visibleSeries.forEach((s) => {
+            gLine
+              .append("path")
+              .datum(s.data)
+              .attr("fill", "none")
+              .attr("stroke", s.color)
+              .attr("stroke-width", 2)
+              .attr("d", line);
 
-          // Points
-          gLine
-            .selectAll(".dot")
-            .data(dataLine)
-            .enter()
-            .append("circle")
-            .attr("cx", (d) => x(d.year))
-            .attr("cy", (d) => y(d.total))
-            .attr("r", 4)
-            .attr("fill", "orange")
-            .on("mouseover", (event, d) => {
-              lineTooltip
-                .style("opacity", 1)
-                .html(`<strong>${d.year}</strong>: ${d.total} medals`);
-            })
-            .on("mousemove", (event) => {
-              lineTooltip
-                .style("left", event.pageX + 14 + "px")
-                .style("top", event.pageY + 14 + "px");
-            })
-            .on("mouseout", () => lineTooltip.style("opacity", 0));
+            gLine
+              .selectAll(`.dot-${s.name}`)
+              .data(s.data)
+              .enter()
+              .append("circle")
+              .attr("cx", (d) => x(d.year))
+              .attr("cy", (d) => y(d.total))
+              .attr("r", 3)
+              .attr("fill", s.color)
+              .on("click", (event, d) => {
+                selectedYear = d.year;
+                if (s.name === selectedCountry) {
+                  sBarCountry = selectedCountry;
+                  sBarSport = null;
+                } else if (s.name === selectedSport) {
+                  sBarSport = selectedSport;
+                  sBarCountry = null;
+                } else if (
+                  s.name === `${selectedCountry} and ${selectedSport}`
+                ) {
+                  sBarCountry = selectedCountry;
+                  sBarSport = selectedSport;
+                }
+                drawBarChart(selectedBar);
+              })
+              .on("mouseover", (event, d) => {
+                lineTooltip
+                  .style("opacity", 1)
+                  .html(
+                    `<strong>${s.name}</strong><br>${d.year}: ${d.total} medals`
+                  );
+              })
+              .on("mousemove", (event) => {
+                lineTooltip
+                  .style("left", event.pageX + 14 + "px")
+                  .style("top", event.pageY + 14 + "px");
+              })
+              .on("mouseout", () => lineTooltip.style("opacity", 0));
+          });
+
+          // Add legend
+          const legend = gLine
+            .append("g")
+            .attr("transform", `translate(475, 0)`);
+
+          legend
+            .append("text")
+            .attr("x", 0)
+            .attr("y", 0)
+            .text("Click a colored box")
+            .style("font-size", "12px")
+            .style("font-weight", "bold");
+
+          legend
+            .append("text")
+            .attr("transform", `translate(0, 12)`)
+            .attr("x", 0)
+            .attr("y", 0)
+            .text("to hide the line")
+            .style("font-size", "12px")
+            .style("font-weight", "bold");
+
+          series.forEach((s, i) => {
+            const row = legend
+              .append("g")
+              .attr("transform", `translate(0, ${i * 20 + 20})`)
+              .style("cursor", "pointer"); // Makes it clear it's clickable
+
+            // Checkbox rectangle
+            const checkbox = row
+              .append("rect")
+              .attr("x", 0)
+              .attr("y", 0)
+              .attr("width", 12)
+              .attr("height", 12)
+              .attr("fill", hiddenSeries.has(s.name) ? "white" : s.color)
+              .attr("stroke", s.color)
+              .attr("stroke-width", 2);
+
+            // Series label
+            row
+              .append("text")
+              .attr("x", 18)
+              .attr("y", 10)
+              .text(s.name)
+              .style("font-size", "12px");
+
+            // Click to toggle visibility
+            row.on("click", () => {
+              if (hiddenSeries.has(s.name)) {
+                hiddenSeries.delete(s.name);
+              } else {
+                hiddenSeries.add(s.name);
+              }
+              drawLineChart(); // Redraw chart and legend
+            });
+          });
         }
 
         // Initial draw: all countries
@@ -321,19 +470,18 @@
         // Update chart when country selected
         countrySelect.on("change", (event) => {
           country = event.target.value;
-          if (country == "all") {
+          if (country == "none") {
             selectedCountry = null;
           } else {
             selectedCountry = event.target.value;
           }
           drawLineChart();
-          drawBarChart();
         });
 
         // Update chart when sport selected
         sportSelect.on("change", (event) => {
           sport = event.target.value;
-          if (sport == "all") {
+          if (sport == "none") {
             selectedSport = null;
           } else {
             selectedSport = event.target.value;
@@ -377,6 +525,9 @@
             mapTooltip.selectAll(".year").on("click", (event) => {
               event.stopPropagation();
               selectedYear = event.target.getAttribute("data-year");
+              sBarCountry = null;
+              sBarSport = null;
+              drawBarChart(selectedBar);
             });
           })
           .on("mousemove", (event) => {
@@ -385,11 +536,11 @@
               .style("top", event.pageY + 14 + "px");
           });
 
-        function createCountryData(data, year, sport) {
+        function createCountryData(data, year, sport, country) {
           const result = [];
 
-          for (const country in data) {
-            const entries = data[country];
+          for (const c in data) {
+            const entries = data[c];
             bronze_count = 0;
             silver_count = 0;
             gold_count = 0;
@@ -405,9 +556,9 @@
             }
 
             medals_count = bronze_count + gold_count + silver_count;
-            if (medals_count != 0) {
+            if (medals_count != 0 && (country == null || c == country)) {
               result.push({
-                country: country,
+                country: c,
                 bronze: bronze_count,
                 silver: silver_count,
                 gold: gold_count,
@@ -417,15 +568,111 @@
           return result;
         }
 
-        function drawBarChart() {
-          const parts = [selectedYear, selectedCountry, selectedSport];
-          const filtered = parts.filter((p) => p != null && p !== "");
-          titleText = filtered.join(" - ");
-          if (titleText == '') {
-            titleText = "Total";
+        function createSportData(data, year, country, sport) {
+          const result = [];
+
+          for (const s in data) {
+            const entries = data[s];
+            bronze_count = 0;
+            silver_count = 0;
+            gold_count = 0;
+            for (const item of entries) {
+              const matchYear = !year || item.year == year;
+              const matchCountry = !country || item.country == country;
+
+              if (matchYear && matchCountry) {
+                bronze_count += item.bronze;
+                gold_count += item.gold;
+                silver_count += item.silver;
+              }
+            }
+
+            medals_count = bronze_count + gold_count + silver_count;
+            if (medals_count != 0 && (sport == null || s == sport)) {
+              result.push({
+                sport: s,
+                bronze: bronze_count,
+                silver: silver_count,
+                gold: gold_count,
+              });
+            }
           }
+          return result;
+        }
+
+        function createAthleteData(data, year, country, sport) {
+          const result = [];
+
+          for (const athlete in data) {
+            const entries = data[athlete];
+            bronze_count = 0;
+            silver_count = 0;
+            gold_count = 0;
+            for (const item of entries) {
+              const matchYear = !year || item.year == year;
+              const matchCountry = !country || item.country == country;
+              const matchSport = !sport || item.sport == sport;
+
+              if (matchYear && matchCountry && matchSport) {
+                bronze_count += item.bronze;
+                gold_count += item.gold;
+                silver_count += item.silver;
+              }
+            }
+
+            medals_count = bronze_count + gold_count + silver_count;
+            if (medals_count != 0) {
+              result.push({
+                athlete: athlete,
+                bronze: bronze_count,
+                silver: silver_count,
+                gold: gold_count,
+              });
+            }
+          }
+          return result;
+        }
+
+        function drawBarChart(type) {
+          const parts = [selectedYear, sBarCountry, sBarSport];
+          const filtered = parts.filter((p) => p != null && p !== "");
+          title = filtered.join(" - ");
+          if (title == "") {
+            title = "Total";
+          }
+          titleText = `By ${
+            type.charAt(0).toUpperCase() + type.slice(1).toLowerCase()
+          } - ${title}`;
           d3.select("#chart-title").text(titleText);
-          data = createCountryData(countries, selectedYear, selectedSport);
+          if (type == "country") {
+            data = createCountryData(
+              countries,
+              selectedYear,
+              sBarSport,
+              sBarCountry
+            );
+          } else if (type == "sport") {
+            data = createSportData(
+              events,
+              selectedYear,
+              sBarCountry,
+              sBarSport
+            );
+          } else {
+            data = createAthleteData(
+              athletes,
+              selectedYear,
+              sBarCountry,
+              sBarSport
+            );
+          }
+          let marginL = 60;
+          if (type == "sport") {
+            marginL = 100;
+          }
+          if (type == "athlete") {
+            marginL = 150;
+          }
 
           // Compute total medals and sort
           data.forEach((d) => {
@@ -447,12 +694,12 @@
             .scaleLinear()
             .domain([0, d3.max(data, (d) => d.total)])
             .nice()
-            .range([50, chartWidth - margin.right]);
+            .range([marginL, chartWidth - margin.right]);
 
           // Y scale is athletes
           const y = d3
             .scaleBand()
-            .domain(data.map((d) => d.country))
+            .domain(data.map((d) => d[type]))
             .range([margin.top, neededHeight - margin.bottom])
             .padding(0.2);
 
@@ -464,7 +711,7 @@
 
           svgChart
             .append("g")
-            .attr("transform", `translate(50, 0)`)
+            .attr("transform", `translate(${marginL}, 0)`)
             .call(d3.axisLeft(y));
 
           // Colors for each medal type
@@ -482,7 +729,7 @@
             .enter()
             .append("g")
             .attr("class", "athlete-bar")
-            .attr("transform", (d) => `translate(0, ${y(d.country)})`)
+            .attr("transform", (d) => `translate(0, ${y(d[type])})`)
             .each(function (d) {
               let currentX = x(0); // start at 0
               const medalOrder = ["bronze", "silver", "gold"];
@@ -499,12 +746,12 @@
                     .attr("fill", medalColors[medal])
                     .on("mouseover", (event) => {
                       barTooltip.style("opacity", 1).html(`
-                  <strong>${d.country}</strong><br>
-                  Gold: ${d.gold}<br>
-                  Silver: ${d.silver}<br>
-                  Bronze: ${d.bronze}<br>
-                  Total: ${d.total}
-                `);
+                        <strong>${d[type]}</strong><br>
+                        Gold: ${d.gold}<br>
+                        Silver: ${d.silver}<br>
+                        Bronze: ${d.bronze}<br>
+                        Total: ${d.total}
+                      `);
                     })
                     .on("mousemove", (event) => {
                       barTooltip
@@ -519,7 +766,7 @@
             });
         }
 
-        drawBarChart(createCountryData(countries), "Total");
+        drawBarChart(selectedBar);
       });
     </script>
   </body>
